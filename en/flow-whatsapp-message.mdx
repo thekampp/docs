@@ -1,0 +1,37 @@
+---
+title: "Send a WhatsApp message in an automation"
+description: "Write the message, personalize it with the client's name, and choose how to send it."
+---
+
+The most-used Kampp Flow action is sending a WhatsApp message. Here's how to get your
+message just right.
+
+## Building the message
+
+<Steps>
+  <Step title="Add the WhatsApp action">
+    Inside the automation, click **Add** and choose **Send WhatsApp**.
+  </Step>
+  <Step title="Choose how to send it">
+    In the **Send via** field, select which of your WhatsApp connections will send the
+    message. (You connect WhatsApp once in Integrations.)
+  </Step>
+  <Step title="Write the message">
+    Type the text. Use **{{name}}** wherever you want the client's name to appear —
+    Kampp swaps it in when sending.
+  </Step>
+</Steps>
+
+## Personalization with {{name}}
+
+Writing *"Hi {{name}}, all good?"* makes each client receive *"Hi Maria, all good?"*,
+*"Hi John, all good?"*, and so on. Simple and personal.
+
+<Tip>
+  Short, kind messages work best. Talk the way you'd talk to the client in person.
+</Tip>
+
+<Note>
+  The message is only sent to clients with a phone on file who haven't opted out of
+  WhatsApp. If a phone is missing, Kampp simply skips that client, with no error.
+</Note>

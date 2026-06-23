@@ -1,0 +1,44 @@
+---
+title: "Criar sua primeira automação"
+description: "Monte do zero uma automação de boas-vindas, passo a passo."
+---
+
+Vamos montar juntos uma automação clássica: **quando um aluno entra no time, ele
+recebe uma mensagem de boas-vindas no WhatsApp.** O mesmo caminho serve para qualquer
+outra automação.
+
+## Passo a passo
+
+<Steps>
+  <Step title="Abra o Kampp Flow">
+    No menu, vá em **Kampp Flow** e clique em **Criar automação** (ou escolha um
+    modelo pronto para começar mais rápido).
+  </Step>
+  <Step title="Escolha o gatilho">
+    Clique no gatilho e selecione **"Atleta entrou em um time"**. Se quiser, escolha um
+    time específico — ou deixe para qualquer time.
+  </Step>
+  <Step title="Adicione a ação">
+    Clique em **Adicionar** e escolha **Enviar WhatsApp**. Escreva a mensagem, por
+    exemplo: *"Olá {{nome}}, seja bem-vindo(a) ao time! Bora treinar 💪"*.
+  </Step>
+  <Step title="Ative a automação">
+    Quando estiver satisfeito, **ative**. A partir daí, todo novo aluno do time recebe
+    a mensagem automaticamente.
+  </Step>
+</Steps>
+
+## O detalhe do {{nome}}
+
+Onde você escrever **{{nome}}**, a Kampp troca pelo nome do aluno na hora de enviar.
+Assim cada pessoa recebe uma mensagem personalizada, mesmo sendo automática.
+
+<Tip>
+  A automação salva sozinha enquanto você monta. E você pode deixá-la desativada
+  enquanto testa, ativando só quando estiver pronta.
+</Tip>
+
+<Note>
+  Quer mais de um passo? Dá para encadear: boas-vindas agora, esperar 3 dias, e mandar
+  outra mensagem. Veja "Esperas e sequências".
+</Note>

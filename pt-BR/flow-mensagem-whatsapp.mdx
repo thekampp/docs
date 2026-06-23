@@ -1,0 +1,39 @@
+---
+title: "Enviar mensagem de WhatsApp na automação"
+description: "Escreva a mensagem, personalize com o nome do aluno e escolha por onde enviar."
+---
+
+A ação mais usada do Kampp Flow é enviar uma mensagem de WhatsApp. Veja como deixar a
+sua mensagem do jeito certo.
+
+## Montando a mensagem
+
+<Steps>
+  <Step title="Adicione a ação de WhatsApp">
+    Dentro da automação, clique em **Adicionar** e escolha **Enviar WhatsApp**.
+  </Step>
+  <Step title="Escolha por onde enviar">
+    No campo **Enviar por**, selecione qual das suas conexões de WhatsApp vai disparar
+    a mensagem. (Você conecta o WhatsApp uma vez nas Integrações.)
+  </Step>
+  <Step title="Escreva a mensagem">
+    Digite o texto. Use **{{nome}}** onde quiser que apareça o nome do aluno — a Kampp
+    troca na hora do envio.
+  </Step>
+</Steps>
+
+## Personalização com {{nome}}
+
+Escrever *"Oi {{nome}}, tudo certo?"* faz cada aluno receber *"Oi Maria, tudo certo?"*,
+*"Oi João, tudo certo?"*, e assim por diante. Simples e pessoal.
+
+<Tip>
+  Mensagens curtas e gentis funcionam melhor. Fale como você falaria pessoalmente com o
+  aluno.
+</Tip>
+
+<Note>
+  A mensagem só é enviada para alunos com telefone cadastrado e que não tenham se
+  descadastrado do WhatsApp. Se faltar telefone, a Kampp simplesmente pula aquele
+  aluno, sem erro.
+</Note>

@@ -1,0 +1,46 @@
+---
+title: "Connect WhatsApp (z-API)"
+description: "Link your WhatsApp to Kampp via z-API to send messages in automations."
+---
+
+For Kampp Flow to send WhatsApp messages, you need to connect your WhatsApp once. The
+most flexible way is through **z-API**, which lets you send free-text messages, with or
+without attachments.
+
+## Before you start
+
+You'll need a z-API account, where you create an "instance" of your WhatsApp. From
+there, you copy three pieces of information:
+
+- **Instance ID**
+- **Instance Token**
+- **Client-Token** (from the account security area)
+
+## How to connect
+
+<Steps>
+  <Step title="Go to Integrations">
+    In the menu, open **Integrations** and choose the **WhatsApp (z-API)** card.
+  </Step>
+  <Step title="Create a new connection">
+    Click **New connection** and give it a name you'll recognize later (e.g., "Main
+    WhatsApp").
+  </Step>
+  <Step title="Paste the credentials">
+    Fill in the Instance ID, Instance Token, and Client-Token you copied from z-API.
+  </Step>
+  <Step title="Save">
+    Done. The connection becomes active and shows up as a **"Send via"** option in your
+    automations.
+  </Step>
+</Steps>
+
+<Tip>
+  You can have more than one WhatsApp connection (e.g., different numbers) and choose
+  which one to send from in each automation.
+</Tip>
+
+<Note>
+  Your credentials are stored securely and never shown again — only the last digits, so
+  you can tell which is which.
+</Note>

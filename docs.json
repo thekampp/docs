@@ -1,0 +1,155 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Kampp",
+  "colors": {
+    "primary": "#EA2828",
+    "light": "#FF5A5A",
+    "dark": "#EA2828"
+  },
+  "navigation": {
+    "languages": [
+      {
+        "language": "pt-BR",
+        "default": true,
+        "groups": [
+          {
+            "group": "Começando",
+            "pages": [
+              "pt-BR/inicio",
+              "pt-BR/criar-conta",
+              "pt-BR/entrar-google-apple",
+              "pt-BR/recuperar-senha",
+              "pt-BR/visao-geral-painel"
+            ]
+          },
+          {
+            "group": "Alunos",
+            "pages": [
+              "pt-BR/convidar-aluno",
+              "pt-BR/importar-alunos",
+              "pt-BR/perfil-evolucao-aluno",
+              "pt-BR/anotacoes-aluno",
+              "pt-BR/suspender-remover-aluno"
+            ]
+          },
+          {
+            "group": "Times",
+            "pages": ["pt-BR/criar-time", "pt-BR/gerenciar-time"]
+          },
+          {
+            "group": "Anamnese e Avaliação",
+            "pages": [
+              "pt-BR/enviar-anamnese",
+              "pt-BR/preencher-anamnese",
+              "pt-BR/registrar-avaliacao",
+              "pt-BR/historico-avaliacoes"
+            ]
+          },
+          {
+            "group": "Treinos e Periodização",
+            "pages": [
+              "pt-BR/criar-treino",
+              "pt-BR/importar-treinos-planilha",
+              "pt-BR/atribuir-treino",
+              "pt-BR/montar-mesociclo",
+              "pt-BR/biblioteca-exercicios"
+            ]
+          },
+          {
+            "group": "Kampp Flow (automações)",
+            "pages": [
+              "pt-BR/flow-o-que-e",
+              "pt-BR/flow-primeira-automacao",
+              "pt-BR/flow-mensagem-whatsapp",
+              "pt-BR/flow-anexos",
+              "pt-BR/flow-esperas-sequencias",
+              "pt-BR/flow-gatilhos-engajamento",
+              "pt-BR/flow-aniversario",
+              "pt-BR/flow-campanha-data",
+              "pt-BR/flow-descadastro"
+            ]
+          },
+          {
+            "group": "Integrações",
+            "pages": ["pt-BR/conectar-whatsapp-zapi", "pt-BR/conectar-whatsapp-oficial"]
+          },
+          {
+            "group": "Equipe",
+            "pages": ["pt-BR/convidar-membros", "pt-BR/permissoes"]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "en/introduction",
+              "en/create-account",
+              "en/sign-in-google-apple",
+              "en/recover-password",
+              "en/dashboard-overview"
+            ]
+          },
+          {
+            "group": "Clients",
+            "pages": [
+              "en/invite-athlete",
+              "en/import-clients",
+              "en/client-profile-progress",
+              "en/client-notes",
+              "en/suspend-remove-client"
+            ]
+          },
+          {
+            "group": "Teams",
+            "pages": ["en/create-team", "en/manage-team"]
+          },
+          {
+            "group": "Intake & Assessment",
+            "pages": [
+              "en/send-intake",
+              "en/fill-intake",
+              "en/record-assessment",
+              "en/assessment-history"
+            ]
+          },
+          {
+            "group": "Workouts & Periodization",
+            "pages": [
+              "en/create-workout",
+              "en/import-workouts-spreadsheet",
+              "en/assign-workout",
+              "en/build-mesocycle",
+              "en/exercise-library"
+            ]
+          },
+          {
+            "group": "Kampp Flow (automations)",
+            "pages": [
+              "en/flow-what-is",
+              "en/flow-first-automation",
+              "en/flow-whatsapp-message",
+              "en/flow-attachments",
+              "en/flow-waits-sequences",
+              "en/flow-engagement-triggers",
+              "en/flow-birthday",
+              "en/flow-scheduled-campaign",
+              "en/flow-opt-out"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": ["en/connect-whatsapp-zapi", "en/connect-whatsapp-official"]
+          },
+          {
+            "group": "Team",
+            "pages": ["en/invite-members", "en/permissions"]
+          }
+        ]
+      }
+    ]
+  }
+}

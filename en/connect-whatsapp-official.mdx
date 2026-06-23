@@ -1,0 +1,49 @@
+---
+title: "Connect the Official WhatsApp (Meta)"
+description: "Use the official WhatsApp API, with messages based on approved templates."
+---
+
+Kampp also connects with the **official WhatsApp Business API**, from Meta. The main
+difference: in automations, the official WhatsApp works with **approved templates** —
+message models you register and Meta approves beforehand.
+
+## Before you start
+
+In your Meta account (WhatsApp Manager), you'll need:
+
+- **Phone Number ID** (the number's identifier)
+- **Access token** (permanent)
+- **WhatsApp Business Account ID** (the "WABA") — **required**, it's what lets Kampp
+  fetch your templates.
+
+## How to connect
+
+<Steps>
+  <Step title="Go to Integrations">
+    In the menu, open **Integrations** and choose the **Official WhatsApp (Meta)**
+    card.
+  </Step>
+  <Step title="Create a new connection">
+    Click **New connection**, give it a name, and paste the three details above.
+  </Step>
+  <Step title="Save">
+    The connection becomes active and appears as an option in automations with the
+    "WhatsApp (Official)" step.
+  </Step>
+</Steps>
+
+## How to use it in automations
+
+In the **"Send WhatsApp (Official)"** step, you choose the connection, Kampp **fetches
+your approved templates**, and you select one. If the template has blanks (variables),
+you fill each one — including **{{name}}** for the client's name.
+
+<Note>
+  Templates are created and approved on Meta's side (in Business Manager). Here in Kampp
+  you **use** the ones already approved — you don't create templates here.
+</Note>
+
+<Tip>
+  Not sure which to use? z-API tends to be simpler to start with (free text). The
+  official one is best when you already work with Meta's template structure.
+</Tip>
