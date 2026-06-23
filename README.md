@@ -1,55 +1,59 @@
-# Mintlify Starter Kit
+# Kampp — Central de Ajuda
 
-Use the starter kit to get your docs deployed and ready to customize.
+Documentação e tutoriais do **Kampp**, a plataforma onde treinadores acompanham seus alunos, montam treinos e automatizam o dia a dia.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Estrutura
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+```
+docs.json        Configuração do site (tema, cores, logo, navegação)
+icon-512.png     Favicon
+logo/            Logo do Kampp
+pt-BR/           Tutoriais em português (idioma padrão)
+en/              Tutoriais em inglês
+```
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+Cada tutorial é um arquivo `.mdx` e aparece no menu conforme estiver listado em `docs.json` (chave `navigation`).
 
-## AI-assisted writing
+## Rodar localmente
 
-Set up your AI coding tool to work with Mintlify:
+Instale a CLI da Mintlify (uma vez só):
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Na raiz do projeto (onde está o `docs.json`), rode:
 
-```
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+O preview abre em `http://localhost:3000`.
 
-## Publishing changes
+## Publicar (deploy)
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+O deploy é **automático**: todo `push` na branch `main` é publicado em produção pela Mintlify, que está conectada a este repositório pelo app do GitHub.
 
-## Need help?
+```bash
+git add -A
+git commit -m "Descrição da mudança"
+git push
+```
 
-### Troubleshooting
+## Como adicionar ou editar um tutorial
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+1. Crie/edite o arquivo `.mdx` na pasta do idioma (`pt-BR/` ou `en/`).
+2. Adicione o caminho da página em `docs.json`, no grupo certo (ex.: `"pt-BR/novo-tutorial"`).
+3. Confira no `mint dev` e faça o `push`.
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+> Escreva pensando no treinador: linguagem simples, direta e no passo a passo, sem termos técnicos.
+
+## Problemas comuns
+
+- **Página dá 404:** confira se você está rodando na pasta que tem o `docs.json` e se o caminho foi adicionado na navegação.
+- **Ambiente não sobe:** rode `mint update` para atualizar a CLI.
+
+## Links úteis
+
+- [Documentação da Mintlify](https://mintlify.com/docs)
+- [Painel da Mintlify](https://dashboard.mintlify.com)
