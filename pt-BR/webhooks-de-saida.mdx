@@ -1,0 +1,58 @@
+---
+title: "Webhooks de saída (avisar outro sistema)"
+description: "Faça o Kampp avisar uma automação externa quando uma compra criar um acesso — para mandar a senha por WhatsApp, por exemplo."
+---
+
+O webhook de **entrada** traz a venda para dentro do Kampp. O webhook de **saída** faz o
+caminho contrário: quando um acesso é criado, o Kampp avisa um sistema seu — n8n, Make,
+Zapier ou qualquer endereço que receba dados.
+
+O uso mais comum: mandar o login e a senha do comprador por WhatsApp, além do e-mail.
+
+## Criar um webhook de saída
+
+<Steps>
+  <Step title="Abra Integrações → Webhooks">
+    No menu **Integrações**, clique no cartão **Webhooks**.
+  </Step>
+  <Step title="Crie o webhook">
+    Clique em **Novo webhook** e dê um nome (ex.: "n8n — boas-vindas").
+  </Step>
+  <Step title="Cole a URL de destino">
+    Em **URL de destino**, cole o endereço `https://...` que vai receber o aviso.
+  </Step>
+  <Step title="Escolha quem dispara">
+    Em **Disparar quando ocorrer a entrega de**, marque as integrações de venda
+    (Kiwify, Hotmart, Sellyo) que devem acionar esse webhook.
+  </Step>
+  <Step title="Salve e teste">
+    Depois de salvar, use **Testar** no detalhe do webhook. O Kampp manda um evento
+    de exemplo agora e mostra a resposta do seu sistema.
+  </Step>
+</Steps>
+
+## O que o Kampp envia
+
+Um evento `access.created`, com:
+
+- os dados do comprador (nome, e-mail, telefone)
+- o **login** e a **senha** de acesso
+- o nome da integração que originou a venda
+
+O envio é assinado (cabeçalho `X-Kampp-Signature`) para o seu sistema poder conferir a
+origem — conferir é opcional.
+
+## Acompanhar os envios
+
+No detalhe do webhook, o bloco **Logs** mostra cada envio com data e status. Se o seu
+sistema estiver fora do ar, o Kampp tenta de novo automaticamente.
+
+<Note>
+  O webhook de saída é secundário: se ele falhar, **a entrega do Kampp acontece do mesmo
+  jeito**. O comprador nunca fica sem acesso por causa de uma automação externa.
+</Note>
+
+<Tip>
+  Sem nenhuma integração marcada, o webhook não dispara. O painel avisa quando isso
+  acontece — é só clicar em **Editar** e escolher.
+</Tip>

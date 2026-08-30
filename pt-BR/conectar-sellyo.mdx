@@ -1,0 +1,58 @@
+---
+title: "Conectar a Sellyo"
+description: "Ligue seus produtos da Sellyo ao Kampp para entregar o acesso assim que a venda for aprovada."
+---
+
+Com a Sellyo conectada, cada venda aprovada cria a conta do comprador no Kampp e dispara
+a entrega. Reembolso e chargeback removem o acesso.
+
+## No Kampp: criar a integração
+
+<Steps>
+  <Step title="Abra Integrações">
+    No menu, vá em **Integrações** e clique no cartão da **Sellyo**.
+  </Step>
+  <Step title="Crie uma nova integração">
+    Clique em **Nova Integração** e dê um nome (ex.: "Sellyo — Mentoria"). Uma integração
+    por produto deixa os logs e as anamneses bem separados.
+  </Step>
+  <Step title="Escolha a senha dos compradores">
+    **Definir senha padrão** desligado = cada comprador recebe uma senha aleatória.
+    Ligado = todos recebem a senha que você digitar.
+  </Step>
+  <Step title="Confirme reembolso e chargeback">
+    Deixe **Revogar no reembolso** e **Revogar no chargeback** ligados.
+  </Step>
+  <Step title="Crie e copie a URL">
+    Clique em **Criar Integração** e copie a **Webhook URL**.
+  </Step>
+</Steps>
+
+## Na Sellyo: colar a URL
+
+<Steps>
+  <Step title="Abra os webhooks">
+    No painel da Sellyo, vá em **Integrações → Webhooks → Adicionar Webhook**.
+  </Step>
+  <Step title="Escolha o produto">
+    Selecione o produto que libera esse treino.
+  </Step>
+  <Step title="Cole a URL e marque os eventos">
+    Adicione a URL do Kampp e selecione:
+
+    - **Venda - Aprovada** — libera o acesso.
+    - **Venda - Reembolso** — remove.
+    - **Venda - Chargeback** — remove.
+  </Step>
+</Steps>
+
+<Note>
+  **Venda - Rejeitada** e pagamentos pendentes são reconhecidos, mas não liberam acesso.
+  Eles aparecem nos logs como **Ignorado**.
+</Note>
+
+## Testar
+
+Depois da primeira venda, abra a integração no Kampp e confira **Logs recentes** — a
+venda deve aparecer com **Acesso concedido**. Veja
+[acompanhar os recebimentos](/pt-BR/logs-de-webhook) se algo não bater.

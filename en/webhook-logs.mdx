@@ -1,0 +1,56 @@
+---
+title: "Track incoming events (logs)"
+description: "See every sale your platform sent to Kampp, what Kampp did with it, and how to reprocess a failure."
+---
+
+Every notification your sales platform sends to Kampp is recorded. It's the best place to
+answer "this person bought — why didn't they get it?".
+
+## Where to look
+
+In **Integrations**, open the platform and then the integration. The **Recent logs** block
+lists the events, newest first, with:
+
+- **Date** it arrived
+- **Event** — Paid, Refunded, Chargeback, Canceled, Expired
+- **Action** — Access granted, Access revoked or Ignored
+- **Email** of the buyer
+- **Status** of the processing
+
+Click any row to open **Event details**, with the raw content the platform sent.
+
+## What each status means
+
+- **Received** — it arrived and is queued.
+- **Processing** — Kampp is working on it.
+- **Processed** — all good.
+- **Ignored** — the event needs no action (e.g. bank slip generated, pending payment,
+  rejected sale).
+- **Duplicate** — the same notification arrived again; Kampp doesn't do it twice.
+- **Failed** — something blocked the processing. The reason is in the details.
+
+## Reprocess a failure
+
+When an event shows up as **Failed**, open the details and use **Reprocess**. Kampp runs
+the same event again with the data it already has.
+
+<Tip>
+  Reprocessing is safe: if access was already granted, nothing is duplicated.
+</Tip>
+
+## Common problems
+
+- **Nothing shows in the logs** — the URL isn't pasted in the platform, it's incomplete, or
+  the event wasn't ticked there.
+- **It says "Ignored"** — the event isn't an approved purchase (it's a bank slip, pending
+  or rejected). That's expected behavior.
+- **They bought but got no workout** — access was granted, but delivery depends on the
+  intake form. Check that there's a rule tied to that webhook and that the form has
+  [deliveries by answer](/en/delivery-by-answer) set up.
+- **No buyer email** — without an email Kampp can't create the account. Check the record in
+  the sales platform.
+
+<Note>
+  The log keeps the original content sent by the platform. It's your proof of what arrived
+  and when — handy when you need to check a sale with their support.
+</Note>

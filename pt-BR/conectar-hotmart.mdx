@@ -1,0 +1,61 @@
+---
+title: "Conectar a Hotmart"
+description: "Ligue seus produtos da Hotmart ao Kampp para entregar o acesso assim que a compra for aprovada."
+---
+
+Com a Hotmart conectada, cada compra aprovada cria a conta do comprador no Kampp e
+dispara a entrega. Reembolso, chargeback e cancelamento removem o acesso.
+
+## No Kampp: criar a integração
+
+<Steps>
+  <Step title="Abra Integrações">
+    No menu, vá em **Integrações** e clique no cartão da **Hotmart**.
+  </Step>
+  <Step title="Crie uma nova integração">
+    Clique em **Nova Integração** e dê um nome (ex.: "Hotmart — Consultoria 12 semanas").
+    Vale criar uma para cada produto.
+  </Step>
+  <Step title="Escolha a senha dos compradores">
+    **Definir senha padrão** desligado = senha aleatória para cada comprador. Ligado =
+    todos recebem a mesma senha que você definir.
+  </Step>
+  <Step title="Confirme reembolso e chargeback">
+    Deixe **Revogar no reembolso** e **Revogar no chargeback** ligados para o acesso sair
+    sozinho nesses casos.
+  </Step>
+  <Step title="Crie e copie a URL">
+    Clique em **Criar Integração** e copie a **Webhook URL**.
+  </Step>
+</Steps>
+
+## Na Hotmart: colar a URL
+
+<Steps>
+  <Step title="Abra os webhooks">
+    No painel da Hotmart, vá em **Ferramentas → Webhooks → Configuração**.
+  </Step>
+  <Step title="Cole a URL do Kampp">
+    Adicione a URL que você copiou e selecione o produto correspondente.
+  </Step>
+  <Step title="Ative os eventos">
+    Marque os eventos de compra:
+
+    - **Compra aprovada** (`PURCHASE_APPROVED`) — libera o acesso.
+    - **Reembolso** (`PURCHASE_REFUNDED`) — remove.
+    - **Chargeback** (`PURCHASE_CHARGEBACK`) — remove.
+    - **Cancelamento** (`PURCHASE_CANCELED`) — remove.
+  </Step>
+</Steps>
+
+<Note>
+  Boleto e Pix gerados, pagamento atrasado e carrinho abandonado são reconhecidos, mas
+  **não liberam acesso** — só a compra aprovada libera. Eles aparecem nos logs como
+  **Ignorado**.
+</Note>
+
+## Testar
+
+Depois da primeira venda (ou de um teste), abra a integração no Kampp: em **Logs
+recentes** deve aparecer a compra com a etiqueta **Acesso concedido**. Se algo falhar,
+veja [acompanhar os recebimentos](/pt-BR/logs-de-webhook).

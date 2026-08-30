@@ -1,0 +1,94 @@
+---
+title: "Deliver workouts based on the answer"
+description: "Each intake answer unlocks the right workout folder, automatically."
+---
+
+This is the part that saves the most time: instead of reading every intake form and
+delivering the workout by hand, the answer itself decides which folder the athlete gets.
+
+It works like this: you create **deliveries**. Each delivery says *"when the answer is X,
+unlock folder Y"*.
+
+## Before you start
+
+You need:
+
+- An intake form with at least one **single choice**, **cards** or **multiple choice**
+  question (those are the ones that can be conditions).
+- Your workout **folders** already built — one per path. If you don't have them yet, see
+  [organize workouts in folders](/en/organize-folders).
+
+## Create a delivery
+
+<Steps>
+  <Step title="Open the form">
+    In **Settings → Intake**, click the form you want to edit.
+  </Step>
+  <Step title="Go to Delivery by answer">
+    Scroll the builder to the **Delivery by answer (optional)** block and click
+    **Add delivery**.
+  </Step>
+  <Step title="Set the condition">
+    Under **When the answer is**, pick the question and then tap the options that apply.
+    You can select more than one — any of them counts.
+  </Step>
+  <Step title="Choose the folder">
+    Under **Delivers →**, select the workout folder that answer unlocks.
+  </Step>
+  <Step title="Save">
+    Click **Save intake form**. From now on, whoever answers that way gets that folder.
+  </Step>
+</Steps>
+
+## Combining conditions (AND)
+
+Inside the same delivery you can use **And also** to stack conditions. The folder is only
+unlocked when **all** of them match.
+
+Example: *goal = Hypertrophy* **AND** *trains at the gym* → "Gym Hypertrophy" folder.
+
+<Tip>
+  Each question can only appear once per delivery. To handle two different goals, create
+  two deliveries.
+</Tip>
+
+## Delivery with no condition
+
+If you create a delivery and leave it without conditions, it applies to **everyone who
+answers**. That's your baseline — what every athlete gets, no matter what they answer.
+
+Deliveries with conditions **stack on top** of that baseline. So someone who answers
+"Hypertrophy" gets the baseline folder **and** the hypertrophy folder.
+
+## When the workout is released
+
+At the top of the block you choose **When to release**:
+
+- **Immediately** — the workout shows up as soon as they finish answering.
+- **After the answer** — you set how many **days** later and at what **hour** it opens.
+
+Example: 1 day at 6am means someone answering at 11pm sees the workout at 6am the next
+morning. The clock is **theirs**, not yours.
+
+<Tip>
+  Holding it for a day gives you time to read the intake form before they start — and it
+  builds that nice "tomorrow morning your workout is there" anticipation.
+</Tip>
+
+## Warnings the dashboard gives you
+
+The builder flags anything that would behave differently than you expect:
+
+- **"Pick the folder this delivery unlocks"** — with no folder, the delivery is ignored.
+- **"Every condition needs at least one option selected"** — an empty condition matches
+  nothing.
+- **"Another delivery also unlocks this same folder"** — two deliveries pointing at the
+  same folder; usually you want different ones.
+- **"No condition: this delivery unlocks for everyone"** — a reminder that it's the
+  baseline.
+
+<Note>
+  Delivery by answer runs **every time** the athlete answers that form — including each
+  round of a [recurring form](/en/recurring-intake). Workouts don't duplicate: if they
+  already have that folder, nothing is delivered again.
+</Note>

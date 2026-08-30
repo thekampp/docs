@@ -1,0 +1,72 @@
+---
+title: "Conectar a Kiwify"
+description: "Ligue seus produtos da Kiwify ao Kampp para entregar o acesso assim que a venda for aprovada."
+---
+
+Com a Kiwify conectada, cada pedido pago cria a conta do comprador no Kampp e dispara a
+entrega. Reembolso remove o acesso.
+
+## No Kampp: criar a integração
+
+<Steps>
+  <Step title="Abra Integrações">
+    No menu, vá em **Integrações** e clique no cartão da **Kiwify**.
+  </Step>
+  <Step title="Crie uma nova integração">
+    Clique em **Nova Integração** e dê um nome que você reconheça depois (ex.: "Kiwify —
+    Plano Anual"). Se você vende produtos diferentes, crie uma integração para cada um.
+  </Step>
+  <Step title="Cole o token (opcional)">
+    No campo **Token**, você pode colar o token do webhook da Kiwify. Ele serve para o
+    Kampp confirmar que a notificação veio mesmo da Kiwify.
+  </Step>
+  <Step title="Escolha a senha dos compradores">
+    Deixe **Definir senha padrão** desligado para cada comprador receber uma senha
+    aleatória. Ligado, todos recebem a mesma senha que você digitar (mínimo de 6
+    caracteres).
+  </Step>
+  <Step title="Confirme reembolso e chargeback">
+    **Revogar no reembolso** e **Revogar no chargeback** vêm ligados. Desligue se você
+    prefere resolver esses casos na mão.
+  </Step>
+  <Step title="Crie e copie a URL">
+    Clique em **Criar Integração**. Na tela seguinte aparece a **Webhook URL** — copie.
+  </Step>
+</Steps>
+
+## Na Kiwify: colar a URL
+
+<Steps>
+  <Step title="Abra as notificações">
+    No painel da Kiwify, vá em **Configurações → Notificações → Webhook URL**.
+  </Step>
+  <Step title="Cole a URL do Kampp">
+    Cole a URL que você copiou e salve.
+  </Step>
+  <Step title="Marque os eventos">
+    Ative pelo menos:
+
+    - **Pedido pago** (`order_paid`) — é o que libera o acesso.
+    - **Reembolso** (`order_refunded`) — é o que remove.
+  </Step>
+</Steps>
+
+## Testar
+
+Faça uma compra de teste (ou use um pedido real recente). Em seguida, abra a integração
+no Kampp: em **Logs recentes** você vê a venda chegando, com o e-mail do comprador e a
+etiqueta **Acesso concedido**.
+
+Se não aparecer nada, confira se a URL foi colada inteira e se o evento está marcado na
+Kiwify. Veja também [acompanhar os recebimentos](/pt-BR/logs-de-webhook).
+
+<Tip>
+  Uma integração por produto deixa tudo mais claro: você consegue exigir uma anamnese
+  diferente para cada oferta e enxergar as vendas separadas nos logs.
+</Tip>
+
+<Note>
+  Só criar a integração ainda não entrega treino nenhum. Quem decide o que o comprador
+  recebe é a anamnese — veja
+  [entregar treino conforme a resposta](/pt-BR/entrega-por-resposta).
+</Note>

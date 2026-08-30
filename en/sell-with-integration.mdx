@@ -1,0 +1,85 @@
+---
+title: "Sell and deliver workouts automatically"
+description: "Connect your checkout to Kampp: the sale creates the buyer's account, sends their access and delivers the right workout."
+---
+
+You sell your program on Kiwify, Hotmart or Sellyo. When a sale is approved, Kampp can do
+the rest on its own: create the buyer's account, email their access, ask for the intake
+form and deliver the workout that fits their profile.
+
+It all lives in the **Integrations** menu.
+
+## How it works
+
+<Steps>
+  <Step title="You create an integration in Kampp">
+    An integration is the channel between the sales platform and Kampp. When you create
+    one, you get a unique **webhook URL**.
+  </Step>
+  <Step title="You paste that URL in the sales platform">
+    That's how you tell it "let Kampp know when someone buys". Each platform has its own
+    path — see the tutorial for yours.
+  </Step>
+  <Step title="The sale happens">
+    When the payment is approved, the platform notifies Kampp. If the buyer doesn't have an
+    account yet, it's created on the spot and they get an email with their login and
+    password.
+  </Step>
+  <Step title="The intake form steps in">
+    If you created an intake rule for that integration, the buyer has to answer before the
+    workout unlocks.
+  </Step>
+  <Step title="The right workout is delivered">
+    Their answer decides which folder they get — fat loss, hypertrophy, beginner, whatever
+    you built.
+  </Step>
+</Steps>
+
+## Why route it through the intake form
+
+Because that's what turns a sale into actual coaching. Instead of every buyer getting the
+same PDF, each one answers three or four questions and receives the program that makes
+sense for them — without you opening the dashboard.
+
+To set this up, see [deliver workouts based on the answer](/en/delivery-by-answer) and
+[when to require the intake](/en/recurring-intake) (the **Webhook** option).
+
+## What the buyer gets
+
+- An **email** with where to download the app, their login (the email used in the purchase)
+  and their password.
+- The password can be **random** (a different one per buyer) or **a default password of
+  yours**, set on the integration.
+- Buyers who **already had an account** keep their own password — the new access is just
+  added on top.
+
+## Refunds and chargebacks
+
+On the integration you decide whether access is removed when the platform reports a
+**refund** or a **chargeback**. Both are on by default.
+
+<Note>
+  Removing access **doesn't delete the buyer's account** or their workout history — it only
+  takes away the content that purchase unlocked.
+</Note>
+
+## Pick your platform
+
+<CardGroup cols={2}>
+  <Card title="Kiwify" icon="plug" href="/en/connect-kiwify">
+    Settings → Notifications → Webhook.
+  </Card>
+  <Card title="Hotmart" icon="plug" href="/en/connect-hotmart">
+    Tools → Webhooks.
+  </Card>
+  <Card title="Sellyo" icon="plug" href="/en/connect-sellyo">
+    Integrations → Webhooks.
+  </Card>
+  <Card title="Track incoming events" icon="list-check" href="/en/webhook-logs">
+    See every sale that arrived and what Kampp did with it.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Integrations are part of the **Integrations & API** add-on (included in the Elite plan).
+</Tip>

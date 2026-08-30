@@ -1,0 +1,89 @@
+---
+title: "Quando exigir a anamnese (e repetir a cada X semanas)"
+description: "Crie regras para pedir a anamnese de atletas novos, de todos ou de quem comprou — uma vez ou de tempos em tempos."
+---
+
+A anamnese sozinha não vai a lugar nenhum: quem manda ela para o atleta é uma **regra**.
+A regra responde duas coisas — **de quem** exigir e **com que frequência**.
+
+As regras ficam em **Configurações → Anamnese**, no bloco **Quando exigir**.
+
+## Criar uma regra
+
+<Steps>
+  <Step title="Clique em Nova regra">
+    No bloco **Quando exigir**, clique em **Nova regra**.
+  </Step>
+  <Step title="Escolha a anamnese">
+    Em **Qual anamnese**, selecione o questionário que essa regra vai pedir.
+  </Step>
+  <Step title="Escolha de quem exigir">
+    Você tem três opções:
+
+    - **Atletas novos** — só quem entrar a partir de agora.
+    - **Todos os atletas** — todos os seus atletas atuais recebem a anamnese agora, e os
+      novos também.
+    - **Webhook** — só quem comprar por uma integração específica (Kiwify, Hotmart, Sellyo).
+      Você escolhe qual webhook em seguida.
+  </Step>
+  <Step title="Defina a repetição">
+    Marque **Repetir a cada** e informe o número de semanas. Sem marcar, a anamnese é
+    pedida **uma vez só**.
+  </Step>
+  <Step title="Salve a regra">
+    Clique em **Salvar regra**. Ela passa a valer imediatamente.
+  </Step>
+</Steps>
+
+## Um check-in a cada 15 dias
+
+É o caso mais pedido. Monte uma anamnese curta de acompanhamento (peso, energia, dores,
+aderência, fotos) e crie uma regra assim:
+
+- **Qual anamnese:** Check-in quinzenal
+- **Exigir de:** Todos os atletas
+- **Repetir a cada:** 2 semanas
+
+A cada duas semanas o atleta recebe o questionário de novo, responde no app, e você vê a
+evolução resposta a resposta.
+
+<Tip>
+  A contagem começa **a partir da última resposta**, não da data em que você criou a
+  regra. Quem respondeu hoje só recebe de novo daqui a duas semanas — quem nunca respondeu
+  continua com a rodada atual pendente.
+</Tip>
+
+## Como funcionam as rodadas
+
+Cada vez que a anamnese é pedida, isso é uma **rodada**. A rodada seguinte só é criada
+quando a anterior foi **respondida** e o prazo já passou — ninguém acumula três
+questionários pendentes por ter viajado.
+
+Cada rodada guarda as respostas separadamente, então você compara o check-in de janeiro
+com o de março sem perder nada.
+
+## O que a regra faz com o treino
+
+Anamnese vinda de regra é **obrigatória**: enquanto ela estiver pendente, os treinos que
+você entregou para aquele atleta ficam travados. Assim que ele responde, o treino é
+liberado (na manhã seguinte, às 6h no horário dele).
+
+<Note>
+  Isso vale para a **primeira** rodada e para as seguintes. Se você usa recorrência,
+  avise o atleta — é o que mantém o check-in em dia.
+</Note>
+
+## Gerenciar as regras
+
+Na lista, cada regra mostra o nome da anamnese e duas etiquetas: **de quem** (Atletas
+novos / Todos os atletas / Compra · nome do webhook) e **com que frequência** (Uma vez /
+A cada N semanas).
+
+- Use **Editar** para mudar qualquer coisa.
+- Desmarque **Ativa** para pausar a regra sem apagá-la.
+- O ícone de lixeira remove a regra (as respostas já recebidas permanecem).
+
+<Tip>
+  Uma anamnese pode estar em várias regras ao mesmo tempo — por exemplo, a mesma anamnese
+  inicial exigida de atletas novos **e** de quem compra na Kiwify.
+</Tip>

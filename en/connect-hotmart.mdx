@@ -1,0 +1,61 @@
+---
+title: "Connect Hotmart"
+description: "Link your Hotmart products to Kampp so access is delivered as soon as the purchase is approved."
+---
+
+With Hotmart connected, every approved purchase creates the buyer's account in Kampp and
+triggers delivery. Refunds, chargebacks and cancellations remove access.
+
+## In Kampp: create the integration
+
+<Steps>
+  <Step title="Open Integrations">
+    In the menu, go to **Integrations** and click the **Hotmart** card.
+  </Step>
+  <Step title="Create a new integration">
+    Click **New Integration** and give it a name (e.g. "Hotmart — 12-week coaching"). It's
+    worth creating one per product.
+  </Step>
+  <Step title="Choose the buyers' password">
+    **Set a default password** off = a random password per buyer. On = everyone gets the
+    same password you choose.
+  </Step>
+  <Step title="Confirm refund and chargeback">
+    Leave **Revoke on refund** and **Revoke on chargeback** on so access is removed
+    automatically in those cases.
+  </Step>
+  <Step title="Create and copy the URL">
+    Click **Create Integration** and copy the **Webhook URL**.
+  </Step>
+</Steps>
+
+## In Hotmart: paste the URL
+
+<Steps>
+  <Step title="Open webhooks">
+    In the Hotmart dashboard, go to **Tools → Webhooks → Settings**.
+  </Step>
+  <Step title="Paste the Kampp URL">
+    Add the URL you copied and select the matching product.
+  </Step>
+  <Step title="Enable the events">
+    Tick the purchase events:
+
+    - **Purchase approved** (`PURCHASE_APPROVED`) — unlocks access.
+    - **Refund** (`PURCHASE_REFUNDED`) — removes it.
+    - **Chargeback** (`PURCHASE_CHARGEBACK`) — removes it.
+    - **Cancellation** (`PURCHASE_CANCELED`) — removes it.
+  </Step>
+</Steps>
+
+<Note>
+  Generated bank slips and Pix, late payments and abandoned carts are recognized but **do
+  not unlock access** — only an approved purchase does. They show up in the logs as
+  **Ignored**.
+</Note>
+
+## Test it
+
+After the first sale (or a test), open the integration in Kampp: **Recent logs** should
+show the purchase with the **Access granted** tag. If something fails, see
+[track incoming events](/en/webhook-logs).

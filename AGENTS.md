@@ -14,8 +14,11 @@
 
 ## Terminology
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+- **Atleta** (pt-BR) / **athlete** (en) — nunca "aluno", "cliente" ou "client".
+- **Anamnese** (pt-BR) / **intake form** (en) — o questionário configurável do coach.
+- **Avaliação física** (pt-BR) / **assessment** (en) — medidas, dobras e fotos. É outra coisa.
+- **Treino** = a sessão; **pasta** = o que se entrega. Entrega é sempre por pasta.
+- **Coach** (os dois idiomas) — não "treinador" nos títulos de menu.
 
 ## Style preferences
 
@@ -29,5 +32,7 @@
 
 ## Content boundaries
 
-{/* Define what should and shouldn't be documented */}
-{/* Example: Don't document internal admin features */}
+- Documente só o que o coach vê no painel (`kampp-coach`) e o que o atleta vê no app.
+- Não documente o backoffice interno (`kampp-admin`) nem detalhes de API/infra.
+- Toda página existe nos **dois idiomas** (`pt-BR/` e `en/`) e nos dois grupos do `docs.json`.
+- Ao renomear um arquivo, adicione o `redirect` correspondente no `docs.json`.

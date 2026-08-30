@@ -1,0 +1,59 @@
+---
+title: "Outbound webhooks (notify another system)"
+description: "Have Kampp notify an external automation when a purchase creates access — to send the password over WhatsApp, for example."
+---
+
+An **inbound** webhook brings the sale into Kampp. An **outbound** webhook goes the other
+way: when access is created, Kampp notifies a system of yours — n8n, Make, Zapier or any
+endpoint that can receive data.
+
+The most common use: sending the buyer's login and password over WhatsApp, on top of the
+email.
+
+## Create an outbound webhook
+
+<Steps>
+  <Step title="Open Integrations → Webhooks">
+    In the **Integrations** menu, click the **Webhooks** card.
+  </Step>
+  <Step title="Create the webhook">
+    Click **New webhook** and give it a name (e.g. "n8n — welcome").
+  </Step>
+  <Step title="Paste the destination URL">
+    Under **Destination URL**, paste the `https://...` address that will receive the event.
+  </Step>
+  <Step title="Choose what triggers it">
+    Under **Fire when access is delivered by**, tick the sales integrations (Kiwify,
+    Hotmart, Sellyo) that should trigger this webhook.
+  </Step>
+  <Step title="Save and test">
+    After saving, use **Test** on the webhook detail page. Kampp sends a sample event right
+    away and shows your system's response.
+  </Step>
+</Steps>
+
+## What Kampp sends
+
+An `access.created` event, with:
+
+- the buyer's details (name, email, phone)
+- the **login** and **password** for their access
+- the name of the integration the sale came from
+
+The request is signed (`X-Kampp-Signature` header) so your system can verify where it came
+from — verifying is optional.
+
+## Tracking deliveries
+
+On the webhook detail page, the **Logs** block shows each attempt with date and status. If
+your system is down, Kampp retries automatically.
+
+<Note>
+  The outbound webhook is secondary: if it fails, **Kampp's own delivery still happens**.
+  The buyer never loses access because of an external automation.
+</Note>
+
+<Tip>
+  With no integration ticked, the webhook never fires. The dashboard warns you when that's
+  the case — just click **Edit** and pick one.
+</Tip>

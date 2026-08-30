@@ -1,0 +1,95 @@
+---
+title: "Entregar treino conforme a resposta"
+description: "Cada resposta da anamnese libera a pasta de treinos certa, automaticamente."
+---
+
+Esta é a parte que economiza mais tempo: em vez de você ler cada anamnese e entregar o
+treino na mão, a própria resposta decide qual pasta o atleta recebe.
+
+O funcionamento é simples: você cria **entregas**. Cada entrega diz *"quando a resposta
+for X, libere a pasta Y"*.
+
+## Antes de começar
+
+Você precisa de:
+
+- Uma anamnese com pelo menos uma pergunta de **escolha única**, **cartões** ou
+  **múltipla escolha** (são as que viram condição).
+- As **pastas** de treino já montadas — uma para cada caminho. Se ainda não tem, veja
+  [organizar treinos em pastas](/pt-BR/organizar-pastas).
+
+## Criar uma entrega
+
+<Steps>
+  <Step title="Abra a anamnese">
+    Em **Configurações → Anamnese**, clique na anamnese que você quer editar.
+  </Step>
+  <Step title="Vá até Entrega por resposta">
+    Role o construtor até o bloco **Entrega por resposta (opcional)** e clique em
+    **Adicionar entrega**.
+  </Step>
+  <Step title="Defina a condição">
+    Em **Quando a resposta for**, escolha a pergunta e depois toque nas opções que valem
+    para essa entrega. Pode marcar mais de uma opção — vale qualquer uma delas.
+  </Step>
+  <Step title="Escolha a pasta">
+    Em **Entrega →**, selecione a pasta de treinos que essa resposta libera.
+  </Step>
+  <Step title="Salve">
+    Clique em **Salvar anamnese**. Pronto — a partir de agora, quem responder assim
+    recebe essa pasta.
+  </Step>
+</Steps>
+
+## Combinando condições (E)
+
+Dentro de uma mesma entrega, você pode usar **E também** para somar condições. Aí a
+pasta só é liberada quando **todas** baterem.
+
+Exemplo: *objetivo = Hipertrofia* **E** *treina na academia* → pasta "Hipertrofia
+Academia".
+
+<Tip>
+  Cada pergunta só pode aparecer uma vez por entrega. Para tratar dois objetivos
+  diferentes, crie duas entregas.
+</Tip>
+
+## Entrega sem condição
+
+Se você criar uma entrega e não colocar nenhuma condição, ela vale para **todo mundo que
+responder**. É a sua base — o que todo atleta recebe, independentemente do que responder.
+
+As entregas com condição **somam por cima** dessa base. Ou seja: quem responde
+"Hipertrofia" recebe a pasta base **e** a pasta de hipertrofia.
+
+## Quando o treino é liberado
+
+No topo do bloco você escolhe **Quando liberar**:
+
+- **Imediata** — o treino aparece assim que o atleta termina de responder.
+- **Após a resposta** — você define quantos **dias** depois e em que **hora** ele abre.
+
+Exemplo: 1 dia às 6h significa que quem responder às 23h vê o treino às 6h da manhã
+seguinte. O horário é o **do atleta**, não o seu.
+
+<Tip>
+  Segurar por um dia dá tempo de você conferir a anamnese antes de o atleta começar — e
+  ainda cria aquela expectativa boa de "amanhã cedo seu treino está aí".
+</Tip>
+
+## Avisos que o painel dá
+
+O construtor avisa quando algo vai sair diferente do esperado:
+
+- **"Escolha a pasta que esta entrega libera"** — sem pasta, a entrega é ignorada.
+- **"Toda condição precisa de ao menos uma opção selecionada"** — condição vazia não bate
+  com nada.
+- **"Outra entrega também libera esta mesma pasta"** — duas entregas apontando para a
+  mesma pasta; normalmente você quer pastas diferentes.
+- **"Sem condição: esta entrega libera pra todos"** — lembrete de que ela é a base.
+
+<Note>
+  A entrega por resposta roda **toda vez** que o atleta responde aquela anamnese —
+  inclusive nas rodadas de uma [anamnese recorrente](/pt-BR/anamnese-recorrente). O
+  treino não duplica: se ele já tem aquela pasta, nada é entregue de novo.
+</Note>

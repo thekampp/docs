@@ -29,36 +29,62 @@
             ]
           },
           {
-            "group": "Alunos",
+            "group": "Atletas",
             "pages": [
-              "pt-BR/convidar-aluno",
-              "pt-BR/importar-alunos",
-              "pt-BR/perfil-evolucao-aluno",
-              "pt-BR/anotacoes-aluno",
-              "pt-BR/suspender-remover-aluno"
+              "pt-BR/convidar-atleta",
+              "pt-BR/importar-atletas",
+              "pt-BR/perfil-evolucao-atleta",
+              "pt-BR/anotacoes-atleta",
+              "pt-BR/suspender-remover-atleta"
             ]
           },
           {
             "group": "Times",
-            "pages": ["pt-BR/criar-time", "pt-BR/gerenciar-time"]
-          },
-          {
-            "group": "Anamnese e Avaliação",
             "pages": [
-              "pt-BR/enviar-anamnese",
-              "pt-BR/preencher-anamnese",
-              "pt-BR/registrar-avaliacao",
-              "pt-BR/historico-avaliacoes"
+              "pt-BR/criar-time",
+              "pt-BR/gerenciar-time",
+              "pt-BR/link-do-time",
+              "pt-BR/treinos-do-time"
             ]
           },
           {
             "group": "Treinos e Periodização",
             "pages": [
               "pt-BR/criar-treino",
+              "pt-BR/organizar-pastas",
               "pt-BR/importar-treinos-planilha",
               "pt-BR/atribuir-treino",
+              "pt-BR/compartilhar-treino-link",
               "pt-BR/montar-mesociclo",
               "pt-BR/biblioteca-exercicios"
+            ]
+          },
+          {
+            "group": "Dietas",
+            "pages": [
+              "pt-BR/criar-dieta",
+              "pt-BR/atribuir-dieta"
+            ]
+          },
+          {
+            "group": "Anamnese",
+            "pages": [
+              "pt-BR/anamnese-o-que-e",
+              "pt-BR/criar-anamnese",
+              "pt-BR/tipos-de-pergunta",
+              "pt-BR/entrega-por-resposta",
+              "pt-BR/tela-final-anamnese",
+              "pt-BR/anamnese-recorrente",
+              "pt-BR/enviar-anamnese",
+              "pt-BR/respostas-anamnese",
+              "pt-BR/responder-anamnese"
+            ]
+          },
+          {
+            "group": "Avaliação física",
+            "pages": [
+              "pt-BR/registrar-avaliacao",
+              "pt-BR/historico-avaliacoes"
             ]
           },
           {
@@ -77,11 +103,24 @@
           },
           {
             "group": "Integrações",
-            "pages": ["pt-BR/conectar-whatsapp-zapi", "pt-BR/conectar-whatsapp-oficial"]
+            "pages": [
+              "pt-BR/vender-com-integracao",
+              "pt-BR/conectar-kiwify",
+              "pt-BR/conectar-hotmart",
+              "pt-BR/conectar-sellyo",
+              "pt-BR/logs-de-webhook",
+              "pt-BR/webhooks-de-saida",
+              "pt-BR/conectar-whatsapp-zapi",
+              "pt-BR/conectar-whatsapp-oficial"
+            ]
           },
           {
             "group": "Equipe",
-            "pages": ["pt-BR/convidar-membros", "pt-BR/permissoes"]
+            "pages": [
+              "pt-BR/convidar-membros",
+              "pt-BR/permissoes",
+              "pt-BR/responsavel-tecnico"
+            ]
           }
         ]
       },
@@ -99,36 +138,62 @@
             ]
           },
           {
-            "group": "Clients",
+            "group": "Athletes",
             "pages": [
               "en/invite-athlete",
-              "en/import-clients",
-              "en/client-profile-progress",
-              "en/client-notes",
-              "en/suspend-remove-client"
+              "en/import-athletes",
+              "en/athlete-profile-progress",
+              "en/athlete-notes",
+              "en/suspend-remove-athlete"
             ]
           },
           {
             "group": "Teams",
-            "pages": ["en/create-team", "en/manage-team"]
-          },
-          {
-            "group": "Intake & Assessment",
             "pages": [
-              "en/send-intake",
-              "en/fill-intake",
-              "en/record-assessment",
-              "en/assessment-history"
+              "en/create-team",
+              "en/manage-team",
+              "en/team-link",
+              "en/team-workouts"
             ]
           },
           {
             "group": "Workouts & Periodization",
             "pages": [
               "en/create-workout",
+              "en/organize-folders",
               "en/import-workouts-spreadsheet",
               "en/assign-workout",
+              "en/share-workout-link",
               "en/build-mesocycle",
               "en/exercise-library"
+            ]
+          },
+          {
+            "group": "Diets",
+            "pages": [
+              "en/create-diet",
+              "en/assign-diet"
+            ]
+          },
+          {
+            "group": "Intake",
+            "pages": [
+              "en/intake-what-is",
+              "en/create-intake",
+              "en/intake-question-types",
+              "en/delivery-by-answer",
+              "en/intake-completion-screen",
+              "en/recurring-intake",
+              "en/send-intake",
+              "en/intake-answers",
+              "en/answer-intake"
+            ]
+          },
+          {
+            "group": "Assessment",
+            "pages": [
+              "en/record-assessment",
+              "en/assessment-history"
             ]
           },
           {
@@ -147,14 +212,73 @@
           },
           {
             "group": "Integrations",
-            "pages": ["en/connect-whatsapp-zapi", "en/connect-whatsapp-official"]
+            "pages": [
+              "en/sell-with-integration",
+              "en/connect-kiwify",
+              "en/connect-hotmart",
+              "en/connect-sellyo",
+              "en/webhook-logs",
+              "en/outbound-webhooks",
+              "en/connect-whatsapp-zapi",
+              "en/connect-whatsapp-official"
+            ]
           },
           {
             "group": "Team",
-            "pages": ["en/invite-members", "en/permissions"]
+            "pages": [
+              "en/invite-members",
+              "en/permissions",
+              "en/technical-manager"
+            ]
           }
         ]
       }
     ]
-  }
+  },
+  "redirects": [
+    {
+      "source": "/pt-BR/convidar-aluno",
+      "destination": "/pt-BR/convidar-atleta"
+    },
+    {
+      "source": "/pt-BR/importar-alunos",
+      "destination": "/pt-BR/importar-atletas"
+    },
+    {
+      "source": "/pt-BR/perfil-evolucao-aluno",
+      "destination": "/pt-BR/perfil-evolucao-atleta"
+    },
+    {
+      "source": "/pt-BR/anotacoes-aluno",
+      "destination": "/pt-BR/anotacoes-atleta"
+    },
+    {
+      "source": "/pt-BR/suspender-remover-aluno",
+      "destination": "/pt-BR/suspender-remover-atleta"
+    },
+    {
+      "source": "/pt-BR/preencher-anamnese",
+      "destination": "/pt-BR/responder-anamnese"
+    },
+    {
+      "source": "/en/import-clients",
+      "destination": "/en/import-athletes"
+    },
+    {
+      "source": "/en/client-profile-progress",
+      "destination": "/en/athlete-profile-progress"
+    },
+    {
+      "source": "/en/client-notes",
+      "destination": "/en/athlete-notes"
+    },
+    {
+      "source": "/en/suspend-remove-client",
+      "destination": "/en/suspend-remove-athlete"
+    },
+    {
+      "source": "/en/fill-intake",
+      "destination": "/en/answer-intake"
+    }
+  ]
 }

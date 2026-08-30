@@ -1,0 +1,82 @@
+---
+title: "Vender e entregar treino automaticamente"
+description: "Ligue seu checkout ao Kampp: a venda cria a conta do comprador, manda o acesso e entrega o treino certo."
+---
+
+Você vende o seu programa na Kiwify, na Hotmart ou na Sellyo. Quando a venda é aprovada,
+o Kampp pode fazer o resto sozinho: cria a conta do comprador, envia o e-mail com o
+acesso, pede a anamnese e entrega o treino que combina com o perfil dele.
+
+Tudo isso vive no menu **Integrações**.
+
+## Como funciona
+
+<Steps>
+  <Step title="Você cria uma integração no Kampp">
+    Uma integração é o canal entre a plataforma de venda e o Kampp. Ao criar, você recebe
+    uma **URL de webhook** exclusiva.
+  </Step>
+  <Step title="Você cola essa URL na plataforma de venda">
+    É lá que você diz "avise o Kampp quando alguém comprar". Cada plataforma tem o seu
+    caminho — veja o tutorial da sua.
+  </Step>
+  <Step title="A venda acontece">
+    Quando o pagamento é aprovado, a plataforma avisa o Kampp. Se o comprador ainda não
+    tem conta, ela é criada na hora e ele recebe um e-mail com o login e a senha.
+  </Step>
+  <Step title="A anamnese entra em cena">
+    Se você criou uma regra de anamnese para essa integração, o comprador precisa responder
+    antes de destravar o treino.
+  </Step>
+  <Step title="O treino certo é entregue">
+    A resposta da anamnese decide qual pasta ele recebe — emagrecimento, hipertrofia,
+    iniciante, o que você tiver montado.
+  </Step>
+</Steps>
+
+## Por que passar pela anamnese
+
+Porque é o que transforma uma venda em um atendimento. Em vez de todo comprador receber o
+mesmo PDF, cada um responde três ou quatro perguntas e recebe o programa que faz sentido
+para ele — sem você abrir o painel.
+
+Para montar isso, veja [entregar treino conforme a resposta](/pt-BR/entrega-por-resposta) e
+[quando exigir a anamnese](/pt-BR/anamnese-recorrente) (opção **Webhook**).
+
+## O que o comprador recebe
+
+- Um **e-mail** com o endereço para baixar o app, o login (o e-mail da compra) e a senha.
+- A senha pode ser **aleatória** (uma diferente para cada comprador) ou **uma senha padrão
+  sua**, definida na integração.
+- Quem **já tinha conta** no Kampp mantém a senha dele — o acesso novo só é somado.
+
+## Reembolso e chargeback
+
+Na integração você decide se o acesso é removido quando a plataforma avisa um
+**reembolso** ou um **chargeback**. Os dois vêm ligados por padrão.
+
+<Note>
+  Remover o acesso **não apaga a conta** do comprador nem o histórico de treinos dele — só
+  tira o conteúdo que aquela compra liberou.
+</Note>
+
+## Escolha a sua plataforma
+
+<CardGroup cols={2}>
+  <Card title="Kiwify" icon="plug" href="/pt-BR/conectar-kiwify">
+    Configurações → Notificações → Webhook.
+  </Card>
+  <Card title="Hotmart" icon="plug" href="/pt-BR/conectar-hotmart">
+    Ferramentas → Webhooks.
+  </Card>
+  <Card title="Sellyo" icon="plug" href="/pt-BR/conectar-sellyo">
+    Integrações → Webhooks.
+  </Card>
+  <Card title="Acompanhar recebimentos" icon="list-check" href="/pt-BR/logs-de-webhook">
+    Veja cada venda que chegou e o que o Kampp fez com ela.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Integrações fazem parte do complemento **Integrações & API** (incluso no plano Elite).
+</Tip>

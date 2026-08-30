@@ -1,0 +1,58 @@
+---
+title: "Connect Sellyo"
+description: "Link your Sellyo products to Kampp so access is delivered as soon as the sale is approved."
+---
+
+With Sellyo connected, every approved sale creates the buyer's account in Kampp and
+triggers delivery. Refunds and chargebacks remove access.
+
+## In Kampp: create the integration
+
+<Steps>
+  <Step title="Open Integrations">
+    In the menu, go to **Integrations** and click the **Sellyo** card.
+  </Step>
+  <Step title="Create a new integration">
+    Click **New Integration** and give it a name (e.g. "Sellyo — Mentorship"). One
+    integration per product keeps logs and intake rules neatly separated.
+  </Step>
+  <Step title="Choose the buyers' password">
+    **Set a default password** off = each buyer gets a random password. On = everyone gets
+    the password you type.
+  </Step>
+  <Step title="Confirm refund and chargeback">
+    Leave **Revoke on refund** and **Revoke on chargeback** on.
+  </Step>
+  <Step title="Create and copy the URL">
+    Click **Create Integration** and copy the **Webhook URL**.
+  </Step>
+</Steps>
+
+## In Sellyo: paste the URL
+
+<Steps>
+  <Step title="Open webhooks">
+    In the Sellyo dashboard, go to **Integrations → Webhooks → Add Webhook**.
+  </Step>
+  <Step title="Pick the product">
+    Select the product that unlocks this workout.
+  </Step>
+  <Step title="Paste the URL and tick the events">
+    Add the Kampp URL and select:
+
+    - **Sale - Approved** — unlocks access.
+    - **Sale - Refund** — removes it.
+    - **Sale - Chargeback** — removes it.
+  </Step>
+</Steps>
+
+<Note>
+  **Sale - Rejected** and pending payments are recognized but don't unlock access. They
+  show up in the logs as **Ignored**.
+</Note>
+
+## Test it
+
+After the first sale, open the integration in Kampp and check **Recent logs** — the sale
+should appear with **Access granted**. See [track incoming events](/en/webhook-logs) if
+something doesn't add up.

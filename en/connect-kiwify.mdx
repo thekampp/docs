@@ -1,0 +1,71 @@
+---
+title: "Connect Kiwify"
+description: "Link your Kiwify products to Kampp so access is delivered as soon as the sale is approved."
+---
+
+With Kiwify connected, every paid order creates the buyer's account in Kampp and triggers
+delivery. Refunds remove access.
+
+## In Kampp: create the integration
+
+<Steps>
+  <Step title="Open Integrations">
+    In the menu, go to **Integrations** and click the **Kiwify** card.
+  </Step>
+  <Step title="Create a new integration">
+    Click **New Integration** and give it a name you'll recognize later (e.g. "Kiwify —
+    Annual Plan"). If you sell different products, create one integration per product.
+  </Step>
+  <Step title="Paste the token (optional)">
+    In the **Token** field you can paste your Kiwify webhook token. It lets Kampp confirm
+    the notification really came from Kiwify.
+  </Step>
+  <Step title="Choose the buyers' password">
+    Leave **Set a default password** off and each buyer gets a random password. Turn it on
+    and everyone gets the same password you type (at least 6 characters).
+  </Step>
+  <Step title="Confirm refund and chargeback">
+    **Revoke on refund** and **Revoke on chargeback** come switched on. Turn them off if you
+    prefer to handle those cases by hand.
+  </Step>
+  <Step title="Create and copy the URL">
+    Click **Create Integration**. The next screen shows the **Webhook URL** — copy it.
+  </Step>
+</Steps>
+
+## In Kiwify: paste the URL
+
+<Steps>
+  <Step title="Open notifications">
+    In the Kiwify dashboard, go to **Settings → Notifications → Webhook URL**.
+  </Step>
+  <Step title="Paste the Kampp URL">
+    Paste the URL you copied and save.
+  </Step>
+  <Step title="Tick the events">
+    Enable at least:
+
+    - **Order paid** (`order_paid`) — this is what unlocks access.
+    - **Refund** (`order_refunded`) — this is what removes it.
+  </Step>
+</Steps>
+
+## Test it
+
+Make a test purchase (or use a recent real order). Then open the integration in Kampp:
+under **Recent logs** you'll see the sale arriving, with the buyer's email and the
+**Access granted** tag.
+
+If nothing shows up, check that the whole URL was pasted and that the event is ticked in
+Kiwify. See also [track incoming events](/en/webhook-logs).
+
+<Tip>
+  One integration per product keeps things clear: you can require a different intake form
+  per offer and see the sales separated in the logs.
+</Tip>
+
+<Note>
+  Creating the integration alone doesn't deliver any workout yet. What the buyer receives is
+  decided by the intake form — see
+  [deliver workouts based on the answer](/en/delivery-by-answer).
+</Note>

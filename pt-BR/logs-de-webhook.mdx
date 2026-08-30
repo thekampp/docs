@@ -1,0 +1,57 @@
+---
+title: "Acompanhar os recebimentos (logs)"
+description: "Veja cada venda que chegou da sua plataforma, o que o Kampp fez com ela e como reprocessar uma falha."
+---
+
+Toda notificação que a sua plataforma de venda manda para o Kampp fica registrada. É o
+melhor lugar para responder "essa pessoa comprou, por que não recebeu?".
+
+## Onde ver
+
+Em **Integrações**, abra a plataforma e depois a integração. O bloco **Logs recentes**
+lista os recebimentos, do mais novo para o mais antigo, com:
+
+- **Data** do recebimento
+- **Evento** — Pago, Reembolsado, Chargeback, Cancelado, Expirado
+- **Ação** — Acesso concedido, Acesso revogado ou Ignorado
+- **E-mail** do comprador
+- **Status** do processamento
+
+Clique em qualquer linha para abrir **Detalhes do recebimento**, com o conteúdo bruto que
+a plataforma enviou.
+
+## O que cada status quer dizer
+
+- **Recebido** — chegou e está na fila.
+- **Processando** — o Kampp está trabalhando nele.
+- **Processado** — deu tudo certo.
+- **Ignorado** — o evento não pede ação (ex.: boleto gerado, pagamento pendente, venda
+  rejeitada).
+- **Duplicado** — a mesma notificação chegou de novo; o Kampp não faz duas vezes.
+- **Falhou** — algo impediu o processamento. O motivo aparece no detalhe.
+
+## Reprocessar uma falha
+
+Quando um recebimento aparece como **Falhou**, abra o detalhe e use **Reprocessar**. O
+Kampp roda o mesmo evento outra vez, com os dados que já tem.
+
+<Tip>
+  Reprocessar é seguro: se o acesso já tiver sido concedido, nada é duplicado.
+</Tip>
+
+## Problemas comuns
+
+- **Nada aparece nos logs** — a URL não está colada na plataforma, está incompleta, ou o
+  evento não foi marcado lá.
+- **Aparece "Ignorado"** — o evento não é de compra aprovada (é boleto, pendente ou
+  rejeitado). É o comportamento esperado.
+- **Comprou mas não recebeu treino** — o acesso foi concedido, mas a entrega depende da
+  anamnese. Confira se existe uma regra ligada a esse webhook e se a anamnese tem
+  [entregas por resposta](/pt-BR/entrega-por-resposta) configuradas.
+- **Sem e-mail do comprador** — sem e-mail o Kampp não consegue criar a conta. Confira o
+  cadastro na plataforma de venda.
+
+<Note>
+  O log guarda o conteúdo original enviado pela plataforma. É a prova de o que chegou e
+  quando — útil quando você precisa conferir uma venda com o suporte deles.
+</Note>

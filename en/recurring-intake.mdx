@@ -1,0 +1,87 @@
+---
+title: "When to require the intake (and repeat it every X weeks)"
+description: "Create rules to ask new athletes, everyone, or buyers — once or on a schedule."
+---
+
+An intake form on its own goes nowhere: what sends it to the athlete is a **rule**. The
+rule answers two questions — **who** has to fill it in and **how often**.
+
+Rules live in **Settings → Intake**, in the **When to require** block.
+
+## Create a rule
+
+<Steps>
+  <Step title="Click New rule">
+    In the **When to require** block, click **New rule**.
+  </Step>
+  <Step title="Pick the form">
+    Under **Which intake form**, select the questionnaire this rule will ask for.
+  </Step>
+  <Step title="Choose who it applies to">
+    You have three options:
+
+    - **New athletes** — only people who join from now on.
+    - **All athletes** — every current athlete gets the form now, and new ones too.
+    - **Webhook** — only people who buy through a specific integration (Kiwify, Hotmart,
+      Sellyo). You pick which webhook next.
+  </Step>
+  <Step title="Set the repetition">
+    Tick **Repeat every** and enter the number of weeks. Leave it off and the form is asked
+    **once only**.
+  </Step>
+  <Step title="Save the rule">
+    Click **Save rule**. It takes effect right away.
+  </Step>
+</Steps>
+
+## A check-in every 15 days
+
+This is the most requested setup. Build a short follow-up form (weight, energy, pain,
+adherence, photos) and create a rule like this:
+
+- **Which intake form:** Biweekly check-in
+- **Applies to:** All athletes
+- **Repeat every:** 2 weeks
+
+Every two weeks the athlete gets the questionnaire again, answers in the app, and you see
+the progress answer by answer.
+
+<Tip>
+  The countdown starts **from the last answer**, not from the day you created the rule.
+  Someone who answered today only gets it again in two weeks — someone who never answered
+  still has the current round pending.
+</Tip>
+
+## How rounds work
+
+Each time the form is asked, that's a **round**. The next round is only created once the
+previous one was **answered** and the deadline passed — nobody piles up three pending
+questionnaires because they went on holiday.
+
+Each round stores its answers separately, so you can compare January's check-in with
+March's without losing anything.
+
+## What the rule does to the workout
+
+A form that comes from a rule is **required**: while it's pending, the workouts you
+delivered to that athlete stay locked. As soon as they answer, the workout is released
+(the next morning, at 6am their time).
+
+<Note>
+  This applies to the **first** round and every one after it. If you use recurrence, tell
+  your athletes — that's what keeps check-ins on schedule.
+</Note>
+
+## Managing rules
+
+In the list, each rule shows the form name and two tags: **who** (New athletes / All
+athletes / Purchase · webhook name) and **how often** (Once / Every N weeks).
+
+- Use **Edit** to change anything.
+- Untick **Active** to pause the rule without deleting it.
+- The trash icon removes the rule (answers you already received stay).
+
+<Tip>
+  One form can be used by several rules at once — for example, the same initial intake
+  required from new athletes **and** from Kiwify buyers.
+</Tip>
