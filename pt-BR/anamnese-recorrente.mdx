@@ -1,6 +1,6 @@
 ---
-title: "Quando exigir a anamnese (e repetir a cada X semanas)"
-description: "Crie regras para pedir a anamnese de atletas novos, de todos ou de quem comprou — uma vez ou de tempos em tempos."
+title: "Quando exigir a anamnese (e repetir de tempos em tempos)"
+description: "Crie regras para pedir a anamnese de atletas novos, de todos ou de quem comprou — uma vez ou a cada tantos dias, semanas ou meses."
 ---
 
 A anamnese sozinha não vai a lugar nenhum: quem manda ela para o atleta é uma **regra**.
@@ -27,8 +27,11 @@ As regras ficam em **Configurações → Anamnese**, no bloco **Quando exigir**.
       Você escolhe qual webhook em seguida.
   </Step>
   <Step title="Defina a repetição">
-    Marque **Repetir a cada** e informe o número de semanas. Sem marcar, a anamnese é
-    pedida **uma vez só**.
+    Marque **Repetir** e diga a cada quanto: digite o número e escolha a unidade —
+    **dias**, **semanas** ou **meses**. Logo abaixo aparece a data em que a próxima cairia
+    se você pedisse hoje, então dá pra conferir antes de salvar.
+
+    Sem marcar, a anamnese é pedida **uma vez só**.
   </Step>
   <Step title="Salve a regra">
     Clique em **Salvar regra**. Ela passa a valer imediatamente.
@@ -42,25 +45,47 @@ aderência, fotos) e crie uma regra assim:
 
 - **Qual anamnese:** Check-in quinzenal
 - **Exigir de:** Todos os atletas
-- **Repetir a cada:** 2 semanas
+- **Repetir:** a cada 15 dias
 
-A cada duas semanas o atleta recebe o questionário de novo, responde no app, e você vê a
+A cada quinze dias o atleta recebe o questionário de novo, responde no app, e você vê a
 evolução resposta a resposta.
 
+## Mês é mês, não quatro semanas
+
+Se você quer trimestral, escolha **3 meses** — não 12 semanas. Doze semanas são 84 dias e
+o trimestre tem uns 91: a cada volta a data andaria uma semana para trás, e em um ano de
+acompanhamento o desencontro fica grande.
+
+Com **meses**, a anamnese cai sempre no mesmo dia do calendário. Pedida em 15 de junho, a
+próxima é 15 de setembro. Quando o dia não existe no mês de destino (31 em fevereiro), ela
+cai no último dia daquele mês e volta ao dia 31 na vez seguinte.
+
 <Tip>
-  A contagem começa **a partir da última resposta**, não da data em que você criou a
-  regra. Quem respondeu hoje só recebe de novo daqui a duas semanas — quem nunca respondeu
-  continua com a rodada atual pendente.
+  **A contagem parte do dia em que a anamnese foi pedida, não da resposta.** Se você pediu
+  dia 15 e o atleta só respondeu dia 30, a próxima continua caindo no dia 15 — o calendário
+  não escorrega para frente por causa da demora dele.
 </Tip>
 
 ## Como funcionam as rodadas
 
-Cada vez que a anamnese é pedida, isso é uma **rodada**. A rodada seguinte só é criada
-quando a anterior foi **respondida** e o prazo já passou — ninguém acumula três
-questionários pendentes por ter viajado.
+Cada vez que a anamnese é pedida, isso é uma **rodada**. Cada rodada guarda as respostas
+separadamente, então você compara o check-in de janeiro com o de março sem perder nada.
 
-Cada rodada guarda as respostas separadamente, então você compara o check-in de janeiro
-com o de março sem perder nada.
+Três coisas acontecem sozinhas, para o acompanhamento nunca parar:
+
+- **Rodada ignorada não trava a fila.** Se a próxima vence e a anterior continua sem
+  resposta, a antiga é encerrada como **não respondida** e a nova entra no lugar. Antes,
+  um atleta que pulasse uma anamnese não recebia mais nenhuma — e, se aquela anamnese
+  fosse a que gera treino pela IA, ele também não recebia mais treino novo.
+- **Nunca chegam duas juntas.** Se o atleta já deve outra anamnese obrigatória sua, a nova
+  espera ele responder a que está aberta. Nada de dois questionários no mesmo dia.
+- **Atraso longo não vira pilha.** Se você pausou a regra por meses e reativou, ele recebe
+  **uma** anamnese, não seis.
+
+<Note>
+  Uma rodada encerrada sem resposta aparece no perfil do atleta como **não respondida**, e
+  não some do histórico — você vê que ela foi pedida e ficou sem retorno.
+</Note>
 
 ## O que a regra faz com o treino
 
@@ -77,7 +102,7 @@ liberado (na manhã seguinte, às 6h no horário dele).
 
 Na lista, cada regra mostra o nome da anamnese e duas etiquetas: **de quem** (Atletas
 novos / Todos os atletas / Compra · nome do webhook) e **com que frequência** (Uma vez /
-A cada N semanas).
+a cada 3 meses / a cada 15 dias, conforme você configurou).
 
 - Use **Editar** para mudar qualquer coisa.
 - Desmarque **Ativa** para pausar a regra sem apagá-la.

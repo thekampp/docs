@@ -1,6 +1,6 @@
 ---
-title: "When to require the intake (and repeat it every X weeks)"
-description: "Create rules to ask new athletes, everyone, or buyers — once or on a schedule."
+title: "When to require the intake (and repeat it on a schedule)"
+description: "Create rules to ask new athletes, everyone, or buyers — once, or every so many days, weeks or months."
 ---
 
 An intake form on its own goes nowhere: what sends it to the athlete is a **rule**. The
@@ -26,8 +26,11 @@ Rules live in **Settings → Intake**, in the **When to require** block.
       Sellyo). You pick which webhook next.
   </Step>
   <Step title="Set the repetition">
-    Tick **Repeat every** and enter the number of weeks. Leave it off and the form is asked
-    **once only**.
+    Tick **Repeat** and say how often: type the number and pick the unit — **days**,
+    **weeks** or **months**. Right below it you'll see the date the next one would land on
+    if you asked today, so you can check before saving.
+
+    Leave it off and the form is asked **once only**.
   </Step>
   <Step title="Save the rule">
     Click **Save rule**. It takes effect right away.
@@ -41,25 +44,47 @@ adherence, photos) and create a rule like this:
 
 - **Which intake form:** Biweekly check-in
 - **Applies to:** All athletes
-- **Repeat every:** 2 weeks
+- **Repeat:** every 15 days
 
-Every two weeks the athlete gets the questionnaire again, answers in the app, and you see
-the progress answer by answer.
+Every fifteen days the athlete gets the questionnaire again, answers in the app, and you
+see the progress answer by answer.
+
+## A month is a month, not four weeks
+
+If you want it quarterly, pick **3 months** — not 12 weeks. Twelve weeks are 84 days and a
+quarter is about 91: every cycle the date would drift a week earlier, and over a year of
+coaching the gap gets wide.
+
+With **months**, the form always lands on the same calendar day. Asked on 15 June, the
+next one is 15 September. When that day doesn't exist in the target month (the 31st in
+February), it lands on the last day of that month and goes back to the 31st the time after.
 
 <Tip>
-  The countdown starts **from the last answer**, not from the day you created the rule.
-  Someone who answered today only gets it again in two weeks — someone who never answered
-  still has the current round pending.
+  **The countdown starts from the day the form was asked, not from the answer.** If you
+  asked on the 15th and the athlete only answered on the 30th, the next one still lands on
+  the 15th — the schedule doesn't drift because they were slow.
 </Tip>
 
 ## How rounds work
 
-Each time the form is asked, that's a **round**. The next round is only created once the
-previous one was **answered** and the deadline passed — nobody piles up three pending
-questionnaires because they went on holiday.
+Each time the form is asked, that's a **round**. Each round stores its answers separately,
+so you can compare January's check-in with March's without losing anything.
 
-Each round stores its answers separately, so you can compare January's check-in with
-March's without losing anything.
+Three things happen on their own, so coaching never stalls:
+
+- **A skipped round doesn't block the queue.** If the next one falls due while the previous
+  is still unanswered, the old one is closed as **not answered** and the new one takes its
+  place. Before, an athlete who skipped one form never got another — and if that form was
+  the one that generates AI workouts, they never got a new workout either.
+- **Two never arrive together.** If the athlete already owes you another required form, the
+  new one waits until they answer the open one. No two questionnaires on the same day.
+- **A long gap doesn't pile up.** If you paused the rule for months and turned it back on,
+  they get **one** form, not six.
+
+<Note>
+  A round closed without an answer shows on the athlete's profile as **not answered** — it
+  doesn't disappear from the history, so you can see it was asked and went unanswered.
+</Note>
 
 ## What the rule does to the workout
 
@@ -75,7 +100,8 @@ delivered to that athlete stay locked. As soon as they answer, the workout is re
 ## Managing rules
 
 In the list, each rule shows the form name and two tags: **who** (New athletes / All
-athletes / Purchase · webhook name) and **how often** (Once / Every N weeks).
+athletes / Purchase · webhook name) and **how often** (Once / every 3 months / every 15
+days, whichever you set).
 
 - Use **Edit** to change anything.
 - Untick **Active** to pause the rule without deleting it.
