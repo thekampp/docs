@@ -87,6 +87,7 @@
               "pt-BR/tela-final-anamnese",
               "pt-BR/anamnese-recorrente",
               "pt-BR/enviar-anamnese",
+              "pt-BR/solicitar-exames",
               "pt-BR/respostas-anamnese",
               "pt-BR/responder-anamnese"
             ]
@@ -244,6 +245,7 @@
               "en/intake-completion-screen",
               "en/recurring-intake",
               "en/send-intake",
+              "en/request-lab-work",
               "en/intake-answers",
               "en/answer-intake"
             ]
