@@ -34,7 +34,11 @@
               "pt-BR/convidar-atleta",
               "pt-BR/importar-atletas",
               "pt-BR/perfil-evolucao-atleta",
+              "pt-BR/metricas-do-atleta",
+              "pt-BR/timeline-do-atleta",
               "pt-BR/anotacoes-atleta",
+              "pt-BR/etiquetas",
+              "pt-BR/pagamentos-do-atleta",
               "pt-BR/suspender-remover-atleta"
             ]
           },
@@ -52,23 +56,30 @@
             "pages": [
               "pt-BR/criar-treino",
               "pt-BR/organizar-pastas",
+              "pt-BR/blocos-antes-e-depois",
+              "pt-BR/capa-do-treino",
+              "pt-BR/series-agrupadas",
+              "pt-BR/tipos-de-serie-e-observacoes",
               "pt-BR/importar-treinos-planilha",
               "pt-BR/atribuir-treino",
               "pt-BR/compartilhar-treino-link",
               "pt-BR/montar-mesociclo",
-              "pt-BR/biblioteca-exercicios"
+              "pt-BR/biblioteca-exercicios",
+              "pt-BR/treinos-executados"
             ]
           },
           {
             "group": "Dietas",
             "pages": [
               "pt-BR/criar-dieta",
-              "pt-BR/atribuir-dieta"
+              "pt-BR/atribuir-dieta",
+              "pt-BR/acompanhar-nutricao"
             ]
           },
           {
-            "group": "Anamnese",
+            "group": "Formulários",
             "pages": [
+              "pt-BR/tipos-de-formulario",
               "pt-BR/anamnese-o-que-e",
               "pt-BR/criar-anamnese",
               "pt-BR/tipos-de-pergunta",
@@ -84,7 +95,31 @@
             "group": "Avaliação física",
             "pages": [
               "pt-BR/registrar-avaliacao",
-              "pt-BR/historico-avaliacoes"
+              "pt-BR/link-de-avaliacao",
+              "pt-BR/historico-avaliacoes",
+              "pt-BR/kampp-body-scan",
+              "pt-BR/dados-sensiveis"
+            ]
+          },
+          {
+            "group": "Chat com atletas",
+            "pages": [
+              "pt-BR/chat-o-que-e",
+              "pt-BR/chat-conversar",
+              "pt-BR/chat-aviso-em-massa",
+              "pt-BR/chat-organizar"
+            ]
+          },
+          {
+            "group": "Cortex (sugestões com IA)",
+            "pages": [
+              "pt-BR/cortex-o-que-e",
+              "pt-BR/cortex-coach-dna",
+              "pt-BR/cortex-escrever-metodologia",
+              "pt-BR/cortex-ligar-na-anamnese",
+              "pt-BR/cortex-revisar-sugestao",
+              "pt-BR/cortex-monitoramento",
+              "pt-BR/cortex-creditos"
             ]
           },
           {
@@ -118,8 +153,21 @@
             "group": "Equipe",
             "pages": [
               "pt-BR/convidar-membros",
+              "pt-BR/aceitar-convite-equipe",
               "pt-BR/permissoes",
-              "pt-BR/responsavel-tecnico"
+              "pt-BR/responsavel-tecnico",
+              "pt-BR/auditoria"
+            ]
+          },
+          {
+            "group": "Sua conta e plano",
+            "pages": [
+              "pt-BR/perfil-e-conta",
+              "pt-BR/notificacoes",
+              "pt-BR/multi-organizacao",
+              "pt-BR/plano-assinatura",
+              "pt-BR/teste-limites-bloqueios",
+              "pt-BR/kampp-partners"
             ]
           }
         ]
@@ -143,7 +191,11 @@
               "en/invite-athlete",
               "en/import-athletes",
               "en/athlete-profile-progress",
+              "en/athlete-metrics",
+              "en/athlete-timeline",
               "en/athlete-notes",
+              "en/tags",
+              "en/athlete-payments",
               "en/suspend-remove-athlete"
             ]
           },
@@ -161,23 +213,30 @@
             "pages": [
               "en/create-workout",
               "en/organize-folders",
+              "en/blocks-before-after",
+              "en/workout-cover",
+              "en/grouped-sets",
+              "en/set-types-and-notes",
               "en/import-workouts-spreadsheet",
               "en/assign-workout",
               "en/share-workout-link",
               "en/build-mesocycle",
-              "en/exercise-library"
+              "en/exercise-library",
+              "en/completed-workouts"
             ]
           },
           {
             "group": "Diets",
             "pages": [
               "en/create-diet",
-              "en/assign-diet"
+              "en/assign-diet",
+              "en/track-nutrition"
             ]
           },
           {
-            "group": "Intake",
+            "group": "Forms",
             "pages": [
+              "en/form-types",
               "en/intake-what-is",
               "en/create-intake",
               "en/intake-question-types",
@@ -193,7 +252,31 @@
             "group": "Assessment",
             "pages": [
               "en/record-assessment",
-              "en/assessment-history"
+              "en/assessment-link",
+              "en/assessment-history",
+              "en/kampp-body-scan",
+              "en/sensitive-data"
+            ]
+          },
+          {
+            "group": "Athlete chat",
+            "pages": [
+              "en/chat-what-is",
+              "en/chat-talk-to-athlete",
+              "en/chat-broadcast",
+              "en/chat-organize"
+            ]
+          },
+          {
+            "group": "Cortex (AI suggestions)",
+            "pages": [
+              "en/cortex-what-is",
+              "en/cortex-coach-dna",
+              "en/cortex-write-methodology",
+              "en/cortex-enable-on-intake",
+              "en/cortex-review-suggestion",
+              "en/cortex-monitoring",
+              "en/cortex-credits"
             ]
           },
           {
@@ -227,8 +310,21 @@
             "group": "Team",
             "pages": [
               "en/invite-members",
+              "en/accept-team-invite",
               "en/permissions",
-              "en/technical-manager"
+              "en/technical-manager",
+              "en/audit-log"
+            ]
+          },
+          {
+            "group": "Your account & plan",
+            "pages": [
+              "en/profile-and-account",
+              "en/notifications",
+              "en/multiple-organizations",
+              "en/plan-subscription",
+              "en/trial-limits-blocks",
+              "en/kampp-partners"
             ]
           }
         ]

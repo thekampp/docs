@@ -3,38 +3,86 @@ title: "Papéis e permissões"
 description: "Defina o que cada membro da sua equipe pode ver e fazer no painel."
 ---
 
-Cada pessoa que você convida para o painel recebe um **papel**. O papel define o que
-ela pode fazer — assim você dá a cada um o acesso certo, sem abrir tudo para todo mundo.
+Cada pessoa que você convida recebe um **papel**, que já vem com um conjunto de permissões.
+Depois, se precisar, você ajusta permissão por permissão naquela pessoa.
 
-## A ideia
+## Os papéis
 
-Pense nos papéis como níveis de acesso:
+| Papel | Ideia geral |
+| --- | --- |
+| **Dono** | Você. Acesso completo, e não pode ser alterado. |
+| **Administrador** | Braço direito: gerencia quase tudo. |
+| **Coach** | O dia a dia — atletas, treinos, avaliações. É o padrão do convite. |
+| **Assistente** | Apoio operacional, com acesso mais estreito. |
+| **Analista** | Foco em acompanhar números. |
+| **Financeiro** | Foco na parte de cobrança. |
 
-- Quem **gerencia tudo** (você, dono do painel): acesso completo, incluindo equipe,
-  integrações e automações.
-- Quem **cuida do dia a dia** (treinadores): trabalha com atletas, treinos e avaliações.
-- Quem tem um acesso **mais restrito**: vê ou ajuda em partes específicas.
+Para trocar o papel de alguém, use o seletor na coluna **Papel**, na tabela de **Equipe** —
+a mudança vale na hora.
 
-## Como ajustar
+<Note>
+  A linha do **Dono** não tem menu de ações: o dono não pode ser rebaixado nem removido pelo
+  painel.
+</Note>
+
+## Ajustar as permissões de uma pessoa
+
+O papel é o ponto de partida. Para afinar:
 
 <Steps>
   <Step title="Vá em Equipe">
-    Abra a área de **Equipe** no painel.
+    Menu **Equipe**, aba **Membros**.
   </Step>
-  <Step title="Escolha o membro">
-    Clique na pessoa cujo acesso você quer ajustar.
+  <Step title="Abra o menu da pessoa">
+    Clique nos três pontinhos (⋮) na linha dela e escolha **Permissões**.
   </Step>
-  <Step title="Defina o papel">
-    Selecione o papel que faz sentido para a função dela. O acesso muda na hora.
+  <Step title="Ligue e desligue o que precisar">
+    Abre um painel lateral com as permissões agrupadas. Cada uma tem um interruptor.
+  </Step>
+  <Step title="Salve">
+    O botão mostra quantas alterações estão pendentes, como **Salvar (3)**. Sem clicar em
+    **Salvar**, nada é aplicado.
   </Step>
 </Steps>
 
-<Tip>
-  Dê a cada pessoa só o acesso de que ela realmente precisa. É mais seguro e deixa o
-  painel mais organizado.
-</Tip>
+<Warning>
+  Trocar o **papel** vale na hora; mexer nas **permissões** exige clicar em **Salvar**. São
+  duas coisas diferentes na mesma tela.
+</Warning>
+
+### Como ler o painel
+
+- Permissões que você mudou em relação ao padrão do papel ganham a marca **alterado**.
+- Permissões delicadas vêm com um **cadeado âmbar**.
+- O grupo de dados sensíveis aparece **destacado em âmbar**, com um escudo.
 
 <Note>
-  Algumas áreas mais sensíveis — como integrações e dados da conta — costumam ficar
-  só com quem gerencia o painel.
+  As permissões são **exceções sobre o papel**. Por isso, trocar o papel da pessoa depois faz
+  o padrão do novo papel voltar a valer.
 </Note>
+
+## O que é "sensível" aqui
+
+Não é integração nem dado de cobrança: são os **dados do atleta** — anamnese, informações
+de saúde, medidas e imagens de Body Scan.
+
+Por isso o painel lembra: **Dados sensíveis exigem consentimento do atleta.** A permissão
+que você dá é só metade; a outra metade é o atleta ter compartilhado aquele dado. Veja
+[Dados sensíveis e consentimento](/pt-BR/dados-sensiveis).
+
+<Tip>
+  Antes de convidar, o modal de convite mostra **O que um [papel] pode fazer** — uma prévia
+  das permissões daquele papel. Vale ler antes de escolher.
+</Tip>
+
+## Quem consegue mexer nisso
+
+A opção **Permissões** só aparece para quem tem permissão de gerenciar permissões — nem todo
+administrador tem. E quem não pode gerenciar a equipe vê apenas o aviso *Você não tem
+permissão para gerenciar a equipe.*
+
+<Tip>
+  Dê a cada pessoa só o acesso de que ela realmente precisa. Além de mais seguro, deixa o
+  painel dela mais limpo — e todo acesso a dado sensível fica registrado na
+  [Auditoria](/pt-BR/auditoria).
+</Tip>

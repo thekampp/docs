@@ -3,39 +3,86 @@ title: "Roles and permissions"
 description: "Define what each team member can see and do in the dashboard."
 ---
 
-Each person you invite to the dashboard gets a **role**. The role defines what they can
-do — so you give each one the right access, without opening everything to everyone.
+Every person you invite gets a **role**, which already comes with a set of permissions.
+After that, if you need to, you adjust permission by permission on that person.
 
-## The idea
+## The roles
 
-Think of roles as access levels:
+| Role | General idea |
+| --- | --- |
+| **Owner** | You. Full access, and it can't be changed. |
+| **Administrator** | Your right hand: manages almost everything. |
+| **Coach** | The day-to-day — athletes, workouts, assessments. It's the invite default. |
+| **Assistant** | Operational support, with narrower access. |
+| **Analyst** | Focused on following the numbers. |
+| **Billing** | Focused on the billing side. |
 
-- Those who **manage everything** (you, the dashboard owner): full access, including
-  team, integrations, and automations.
-- Those who **handle the day-to-day** (trainers): work with athletes, workouts, and
-  assessments.
-- Those with **more limited** access: view or help with specific parts.
+To change someone's role, use the selector in the **Role** column, in the **Team** table —
+the change takes effect right away.
 
-## How to adjust
+<Note>
+  The **Owner** row has no actions menu: the owner can't be demoted or removed from the
+  dashboard.
+</Note>
+
+## Adjusting one person's permissions
+
+The role is the starting point. To fine-tune it:
 
 <Steps>
   <Step title="Go to Team">
-    Open the **Team** area in the dashboard.
+    **Team** menu, **Members** tab.
   </Step>
-  <Step title="Pick the member">
-    Click the person whose access you want to adjust.
+  <Step title="Open the person's menu">
+    Click the three dots (⋮) on their row and choose **Permissions**.
   </Step>
-  <Step title="Set the role">
-    Select the role that fits their job. Access changes right away.
+  <Step title="Switch on and off what you need">
+    A side panel opens with the permissions grouped. Each one has a toggle.
+  </Step>
+  <Step title="Save">
+    The button shows how many changes are pending, like **Save (3)**. Without clicking
+    **Save**, nothing is applied.
   </Step>
 </Steps>
 
-<Tip>
-  Give each person only the access they actually need. It's safer and keeps the
-  dashboard tidier.
-</Tip>
+<Warning>
+  Changing the **role** takes effect right away; touching the **permissions** requires
+  clicking **Save**. They're two different things on the same screen.
+</Warning>
+
+### How to read the panel
+
+- Permissions you changed from the role's default get the **changed** mark.
+- Sensitive permissions come with an **amber padlock**.
+- The sensitive data group appears **highlighted in amber**, with a shield.
 
 <Note>
-  Some more sensitive areas — like integrations and account data — usually stay with
-  whoever manages the dashboard.
+  Permissions are **exceptions on top of the role**. That's why changing the person's role
+  afterwards makes the new role's default apply again.
 </Note>
+
+## What "sensitive" means here
+
+It's not integrations or billing data: it's the **athlete's data** — intake form, health
+information, measurements and Body Scan images.
+
+That's why the panel reminds you: **Sensitive data requires the athlete's consent.** The
+permission you grant is only half of it; the other half is the athlete having shared that
+data. See [Sensitive data and consent](/en/sensitive-data).
+
+<Tip>
+  Before you invite someone, the invite modal shows **What a [role] can do** — a preview of
+  that role's permissions. Worth reading before you choose.
+</Tip>
+
+## Who can change this
+
+The **Permissions** option only shows up for people who have permission to manage
+permissions — not every administrator does. And anyone who can't manage the team just sees
+the notice *You don't have permission to manage the team.*
+
+<Tip>
+  Give each person only the access they actually need. Besides being safer, it keeps their
+  dashboard tidier — and every access to sensitive data is recorded in the
+  [Audit log](/en/audit-log).
+</Tip>

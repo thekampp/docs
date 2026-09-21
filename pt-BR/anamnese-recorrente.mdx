@@ -6,7 +6,12 @@ description: "Crie regras para pedir a anamnese de atletas novos, de todos ou de
 A anamnese sozinha não vai a lugar nenhum: quem manda ela para o atleta é uma **regra**.
 A regra responde duas coisas — **de quem** exigir e **com que frequência**.
 
-As regras ficam em **Configurações → Anamnese**, no bloco **Quando exigir**.
+As regras ficam em **Formulários → Anamneses**, no bloco **Quando exigir**.
+
+<Note>
+  Feedbacks têm o bloco equivalente na aba **Feedbacks**, chamado **Quando enviar**. Cada
+  aba mostra só as regras do seu tipo, para não misturar.
+</Note>
 
 ## Criar uma regra
 
@@ -78,7 +83,9 @@ Três coisas acontecem sozinhas, para o acompanhamento nunca parar:
   um atleta que pulasse uma anamnese não recebia mais nenhuma — e, se aquela anamnese
   fosse a que gera treino pela IA, ele também não recebia mais treino novo.
 - **Nunca chegam duas juntas.** Se o atleta já deve outra anamnese obrigatória sua, a nova
-  espera ele responder a que está aberta. Nada de dois questionários no mesmo dia.
+  espera ele responder a que está aberta — em vez de empilhar questionário em cima de
+  questionário. Isso vale entre anamneses; a regra que separa anamnese de feedback é outra,
+  e está em [Anamnese ou feedback?](/pt-BR/tipos-de-formulario).
 - **Atraso longo não vira pilha.** Se você pausou a regra por meses e reativou, ele recebe
   **uma** anamnese, não seis.
 

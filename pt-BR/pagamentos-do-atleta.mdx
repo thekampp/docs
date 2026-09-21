@@ -1,0 +1,85 @@
+---
+title: "Pagamentos do atleta"
+description: "Veja o que cada atleta já pagou, some vendas das integrações e registre o que entrou por fora."
+---
+
+Cada atleta tem uma aba **Pagamentos** com o histórico financeiro dele com você. Ali entram
+tanto as **vendas reconhecidas pelas integrações** (Kiwify, Hotmart, Sellyo) quanto os
+**lançamentos que você faz na mão**.
+
+Abra o atleta e vá na aba **Pagamentos**.
+
+## O resumo
+
+Três cartões no topo:
+
+- **Valor bruto** — a soma do que foi vendido.
+- **Total recebido** — o que efetivamente entrou.
+- **Pagamentos válidos** — quantos registros contam, com aviso em âmbar quando algum está
+  **pendente de revisão**.
+
+## O histórico
+
+A tabela mostra **Data, Produto, Origem, Status e Valor**.
+
+**Origem** diz de onde veio: **Manual** (você lançou) ou o nome do gateway. **Status** pode
+ser:
+
+| Status | O que significa |
+| --- | --- |
+| **Pago** | Entrou normalmente. |
+| **Revisar dados** | Faltou informação no registro — vale conferir. |
+| **Estorno parcial** / **Estornado** | Dinheiro devolvido, no todo ou em parte. |
+| **Chargeback** | Contestação na operadora. |
+| **Anulado** | Lançamento manual excluído da visão financeira. |
+
+### Filtros
+
+- **Período** — campos **De** e **Até**, com **Limpar período** para voltar ao normal.
+- **Status** — vem filtrado em **Pago**. Mude para **Todos** quando estiver investigando
+  algo.
+- **Origem** — **Todas as origens**, **Gateways** ou **Manuais**.
+
+<Tip>
+  Como o filtro já abre em "Pago", é fácil achar que um estorno sumiu. Se um valor não bate,
+  troque o status para **Todos** antes de concluir qualquer coisa.
+</Tip>
+
+## Registrar um pagamento à mão
+
+Serve para o que entrou fora das integrações: PIX, dinheiro, transferência, um plano
+vendido pessoalmente.
+
+<Steps>
+  <Step title="Clique em Registrar pagamento">
+    O botão vermelho no topo da aba.
+  </Step>
+  <Step title="Preencha">
+    **Valor recebido**, **Moeda**, **Produto ou plano** (ex.: *Consultoria mensal*), **Data
+    e hora**, **Parcelas** e **Observações**.
+  </Step>
+  <Step title="Salve">
+    Clique em **Salvar pagamento**. Ele entra no histórico com a origem **Manual**.
+  </Step>
+</Steps>
+
+## Ver o detalhe de um pagamento
+
+Clique em qualquer linha para abrir o painel lateral **Detalhes do pagamento**, com o valor
+bruto, o líquido, o que foi estornado, os dados da venda e a **auditoria** — quem registrou,
+quando, e o histórico de eventos daquele pagamento.
+
+## Excluir um lançamento manual
+
+Só lançamentos **manuais** podem ser excluídos (pelo ícone de lixeira ou pelo rodapé do
+painel de detalhes). O Kampp pede um **motivo da exclusão**.
+
+<Note>
+  Excluir tira o lançamento da visão financeira e dos totais, mas **o registro é preservado
+  para auditoria**. Nada é apagado de verdade — por isso o motivo é obrigatório.
+</Note>
+
+<Warning>
+  Pagamentos vindos de gateway **não** são excluíveis por aqui. Eles refletem o que a
+  plataforma de venda reconheceu; ajustes precisam acontecer lá.
+</Warning>

@@ -1,53 +1,150 @@
 ---
-title: "Enviar uma anamnese para um atleta"
-description: "Mande um questionário da sua biblioteca para um atleta específico responder no app."
+title: "Enviar um formulário para um atleta"
+description: "Mande uma anamnese ou um feedback na hora, marque uma data, ou programe a repetição."
 ---
 
-Além das regras automáticas, você pode enviar uma anamnese **na hora** para um atleta
-específico — quando ele volta de uma lesão, muda de objetivo ou você só quer atualizar
-os dados.
+Além das regras automáticas, você pode enviar um formulário para **um atleta específico** —
+quando ele volta de uma lesão, muda de objetivo, ou você quer combinar um acompanhamento
+só com ele.
 
 ## Como enviar
 
 <Steps>
   <Step title="Abra o atleta">
-    Em **Atletas**, abra o perfil da pessoa e vá na aba **Avaliações**.
+    Em **Atletas**, abra a pessoa e vá na aba **Avaliações**.
   </Step>
-  <Step title="Clique em Enviar anamnese">
-    No bloco **Anamnese**, use o botão **Enviar anamnese**.
+  <Step title="Escolha a sub-aba">
+    **Anamnese** ou **Feedback**, conforme o que você vai mandar. É a sub-aba que define o
+    tipo — o botão e a lista acompanham.
   </Step>
-  <Step title="Escolha qual anamnese">
-    Selecione um questionário da sua biblioteca e confirme.
+  <Step title="Clique em Enviar anamnese (ou Enviar feedback)">
+    Abre a janela de envio, já com os formulários daquele tipo.
   </Step>
-  <Step title="O atleta responde no app">
-    Ele recebe uma notificação e responde direto no aplicativo. As respostas voltam para
-    essa mesma tela.
+  <Step title="Escolha qual">
+    Selecione o formulário da sua biblioteca.
+  </Step>
+  <Step title="Diga quando">
+    **Agora**, **Em uma data** ou **Repetir**. Confirme.
   </Step>
 </Steps>
 
+## As três formas de enviar
+
+### Agora
+
+Vai na hora. O atleta recebe a notificação e responde no aplicativo.
+
+### Em uma data
+
+Você marca o dia e esquece. O envio sai **na manhã** daquele dia.
+
 <Note>
-  Se a lista aparecer vazia, é porque você ainda não tem nenhuma anamnese criada. Monte
-  uma em **Configurações → Anamnese** — veja [criar uma anamnese](/pt-BR/criar-anamnese).
+  A data começa **amanhã**, e não hoje. Como o envio agendado sai de manhã, marcar hoje à
+  tarde entregaria só amanhã — você pediria uma coisa e receberia outra. Para hoje, use
+  **Agora**, que é imediato de verdade.
 </Note>
+
+### Repetir
+
+Você escolhe o dia do primeiro envio e de quanto em quanto tempo ele se repete — em
+**dias**, **semanas** ou **meses**.
+
+<Tip>
+  É assim que se monta um acompanhamento sob medida: um feedback mensal só para aquele
+  atleta, sem criar uma regra que valha para a carteira inteira.
+</Tip>
+
+## Até quando a repetição dura
+
+**Não tem prazo.** Ela repete enquanto a pessoa for sua atleta, e para sozinha quando o
+vínculo acaba.
+
+Preferimos isso a uma data de validade justamente para não criar uma parada silenciosa: um
+prazo acabaria daqui a um ano, o formulário simplesmente pararia de chegar e você
+descobriria quando alguém comentasse.
+
+<Note>
+  **Atleta suspenso não recebe formulário** — nem na hora, nem agendado. Quem está suspenso
+  não consegue ver os treinos, e perguntar "como foi seu treino?" nessa situação é fora de
+  hora. A repetição fica pausada e, ao reativar, ele recebe **um** formulário — o da vez,
+  não a pilha do período parado.
+</Note>
+
+## Ver e cancelar o que está marcado
+
+Na mesma sub-aba, o bloco **Próximos envios** mostra o que ainda vai ser enviado e em que
+datas.
+
+No primeiro envio de cada agendamento aparece também **Editar**. Ele é do agendamento
+inteiro, não daquela data — por isso não se repete em cada linha.
+
+- **A repetição** você muda quando quiser: o próximo envio já sai no ritmo novo.
+- **A data do primeiro envio** só muda enquanto ele não aconteceu. Depois disso o campo
+  aparece desabilitado, porque quem passa a comandar o calendário é o envio que já saiu.
+
+Clicando em **Cancelar**, você escolhe o alcance:
+
+- **Cancelar só este envio** — aquela data não acontece. As seguintes seguem normalmente,
+  nas datas certas.
+- **Cancelar a repetição para [Nome]** — aquele atleta para de receber. Se a repetição veio
+  de uma regra da sua biblioteca, **os outros atletas continuam recebendo**.
+
+<Tip>
+  Cancelar um envio do meio não bagunça o calendário: o seguinte cai na data que já estava
+  prevista, e não um ciclo depois.
+</Tip>
 
 ## Ver as respostas
 
-No bloco **Anamnese** do perfil ficam todas as anamneses daquele atleta, da mais recente
-para a mais antiga:
+Na sub-aba ficam todos os envios daquele atleta, do mais recente para o mais antigo:
 
-- **Pendente** (relógio) — enviada, ainda não respondida.
-- **Respondida** (visto) — clique para abrir as respostas, incluindo as fotos.
+| Estado | O que significa |
+| --- | --- |
+| **Aguardando resposta no app** | Enviado, ainda não respondido. |
+| **Respondida** | Clique para abrir as respostas, incluindo as fotos. |
+| **Envio cancelado** | Você desfez antes de ele responder. |
+| **Não respondida** | Venceu quando a próxima foi pedida. |
+| **Não enviada** | A anamnese do mês teve prioridade. Veja [Anamnese ou feedback?](/pt-BR/tipos-de-formulario) |
 
 <Tip>
-  Enviar de novo a mesma anamnese cria uma **nova rodada**. As respostas antigas
+  Enviar de novo o mesmo formulário cria uma **nova rodada**. As respostas antigas
   continuam guardadas, então dá para comparar o antes e o depois.
 </Tip>
 
+## Como o atleta é lembrado
+
+Vale saber, porque é a pergunta que chega quando um atleta demora a responder.
+
+<Steps>
+  <Step title="Um aviso por dia, no máximo">
+    O formulário abre sozinho no aplicativo **uma vez por dia**. Aparecer a cada abertura
+    viraria cobrança: quem abre o app quatro vezes para treinar levaria o mesmo aviso quatro
+    vezes — e isso não faz ninguém responder mais rápido.
+  </Step>
+  <Step title="Ele pode responder depois">
+    Há um **Responder depois** no aviso. Prender quem abriu o app para treinar só faz ele
+    fechar o app.
+  </Step>
+  <Step title="Mas não some">
+    Enquanto não responder, fica um **marcador fixo na tela inicial** dele. Tocar ali reabre
+    o formulário na hora, mesmo que o aviso já tenha aparecido naquele dia.
+  </Step>
+</Steps>
+
+Ele também recebe uma **notificação** quando o formulário chega, e tocar nela abre o
+formulário direto.
+
+<Note>
+  Quando a anamnese está segurando os treinos, o aplicativo diz isso com todas as letras —
+  no aviso e no marcador. Assim o atleta entende por que não está vendo treino, em vez de
+  achar que é problema no app.
+</Note>
+
 ## Envio manual não trava o treino
 
-Anamnese enviada manualmente é um pedido, não uma exigência: o atleta continua com acesso
-normal aos treinos.
+Formulário enviado na mão é um pedido, não uma exigência: o atleta segue com acesso normal
+aos treinos.
 
-Se você quer que o treino só libere depois da resposta, use uma regra em
-**Configurações → Anamnese → Quando exigir**. Veja
+Se você quer que o treino só libere depois da resposta, isso se faz com uma **regra**, em
+**Formulários → Anamneses → Quando exigir**. Veja
 [quando exigir a anamnese](/pt-BR/anamnese-recorrente).

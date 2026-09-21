@@ -1,61 +1,124 @@
 ---
-title: "Visão geral do painel"
-description: "Um tour rápido pelas áreas do seu painel e para que serve cada uma."
+title: "O painel inicial"
+description: "O resumo do seu negócio no período que você escolher — e um mapa das áreas do menu."
 ---
 
-O painel é dividido em áreas simples, cada uma cuidando de uma parte do seu trabalho.
-Aqui vai um resumo para você se localizar.
+Ao entrar no Kampp você cai no **Dashboard**: o resumo de como está o seu trabalho no
+período escolhido.
 
-## As áreas principais
+## Escolher o período
+
+No canto superior direito fica o filtro de datas. Clique nele e escolha um atalho — **Hoje,
+Últimos 7 dias, Últimos 14 dias, Últimos 30 dias, Este mês, Mês passado, Este ano, Ano
+passado** ou **Tempo todo**.
+
+Para um intervalo específico, clique na data inicial e na final no calendário e confirme em
+**Aplicar**.
+
+<Tip>
+  A sua escolha fica salva: ao voltar ao painel depois, ele abre no mesmo período. Não
+  precisa reconfigurar toda vez.
+</Tip>
+
+## Os três números do topo
+
+| Card | O que é |
+| --- | --- |
+| **Atletas** | O total de atletas vinculados a você. |
+| **Atletas Treinando** | Quantos concluíram pelo menos um treino no período. |
+| **Treinos Concluídos** | Quantos treinos foram finalizados no período. |
+
+Cada card traz uma porcentagem comparando com o **período anterior de mesmo tamanho** —
+últimos 7 dias contra os 7 dias antes deles, e assim por diante.
+
+<Note>
+  O card **Atletas** mostra a sua base inteira e **não muda** com o filtro de período.
+</Note>
+
+## Atividade dos atletas
+
+Um gráfico de barras por dia, com **Atletas treinando** e **Treino concluído**. Serve para
+enxergar o ritmo: dias fortes, dias mortos, e se a semana inteira está caindo.
+
+## Alerta: atletas que precisam de atenção
+
+O card mais útil da tela. Ele lista quem parou de treinar, classificado por gravidade:
+
+| Nível | Quando aparece |
+| --- | --- |
+| **Atenção** | 7 a 13 dias sem treinar |
+| **Em risco** | 14 a 20 dias sem treinar |
+| **Crítico** | 21 dias ou mais sem treinar |
+
+A tabela mostra os cinco primeiros; use **Ver todos** para abrir a lista completa. Clicar em
+qualquer linha leva direto à ficha daquela pessoa.
+
+<Warning>
+  Este card **ignora o filtro de período** — ele mostra sempre quem está inativo **agora**.
+  O mesmo vale para **Atividades mais recentes**. É de propósito: risco de cancelamento é
+  uma informação do presente, não do intervalo que você escolheu.
+</Warning>
+
+<Tip>
+  Trate essa lista como a sua tarefa do dia. Um atleta em **Atenção** ainda volta com uma
+  mensagem; um em **Crítico** normalmente já decidiu sair.
+</Tip>
+
+## Relatório de Ganhos
+
+Mostra quanto você gerou no período, dividido entre **Alunos** e **Parceiros**. O link **Ver
+tudo** leva ao [Kampp Partners](/pt-BR/kampp-partners), com saldo, extrato e saques.
+
+## Atividades mais recentes
+
+As últimas seis sessões concluídas pelos seus atletas, com o nome da pessoa, o treino e há
+quanto tempo foi.
+
+<Note>
+  **Relatório de Ganhos** e **Alerta** dependem do seu plano. Em planos que não os incluem,
+  eles simplesmente não aparecem e os outros cards ocupam o espaço.
+</Note>
+
+## O mapa do menu
 
 <CardGroup cols={2}>
-  <Card title="Dashboard" icon="chart-line">
-    O resumo do seu negócio: atletas ativos, movimento recente e, se você participa do
-    programa de parceiros, os seus ganhos.
+  <Card title="Atletas" icon="users" href="/pt-BR/perfil-evolucao-atleta">
+    Sua lista de atletas, a evolução de cada um e o acesso deles.
   </Card>
-  <Card title="Atletas" icon="users">
-    Sua lista de atletas. Aqui você acompanha cada pessoa, vê a evolução, deixa
-    anotações e gerencia o acesso.
+  <Card title="Treinos" icon="dumbbell" href="/pt-BR/criar-treino">
+    Sua biblioteca em pastas, e os blocos de aquecimento.
   </Card>
-  <Card title="Treinos" icon="dumbbell">
-    Sua biblioteca de treinos, organizada em pastas. É daqui que saem as entregas para
-    atletas e times.
+  <Card title="Exercícios" icon="list" href="/pt-BR/biblioteca-exercicios">
+    Seu acervo, com vídeo e instruções.
   </Card>
-  <Card title="Exercícios" icon="list">
-    Seu acervo de exercícios, com vídeo e instruções — a base dos treinos que você monta.
+  <Card title="Dietas" icon="apple-whole" href="/pt-BR/criar-dieta">
+    Planos alimentares e acompanhamento da aderência.
   </Card>
-  <Card title="Dietas" icon="apple-whole">
-    Monte planos alimentares com refeições, macros e meta de água, e entregue para
-    atletas ou times.
+  <Card title="Formulários" icon="clipboard-list" href="/pt-BR/anamnese-o-que-e">
+    Suas anamneses e feedbacks, as regras de envio e as respostas.
   </Card>
-  <Card title="Times" icon="user-group">
-    Agrupe atletas por turma, modalidade ou plano. É também por aqui que sai o link do
-    time.
+  <Card title="Times" icon="user-group" href="/pt-BR/criar-time">
+    Agrupe atletas por turma, modalidade ou plano.
   </Card>
-  <Card title="Flow" icon="bolt">
-    Crie automações: mensagens que saem sozinhas nos momentos certos (boas-vindas,
-    aniversário, atleta sumido…).
+  <Card title="Chat" icon="comments" href="/pt-BR/chat-o-que-e">
+    Converse com seus atletas sem sair do painel.
   </Card>
-  <Card title="Integrações" icon="plug">
-    Conecte o WhatsApp e as plataformas de venda (Kiwify, Hotmart, Sellyo) para entregar
-    treino automaticamente.
+  <Card title="Flow" icon="bolt" href="/pt-BR/flow-o-que-e">
+    Mensagens que saem sozinhas nos momentos certos.
+  </Card>
+  <Card title="Cortex" icon="brain" href="/pt-BR/cortex-o-que-e">
+    Sugestões de treino e dieta no seu método, para você revisar.
+  </Card>
+  <Card title="Integrações" icon="plug" href="/pt-BR/vender-com-integracao">
+    WhatsApp e plataformas de venda.
   </Card>
 </CardGroup>
 
-## Conta
-
-- **Equipe** — convide outros profissionais para o painel e defina o que cada um pode ver
-  e fazer.
-- **Configurações** — seu perfil, responsável técnico, **anamneses**, plano e
-  notificações.
-
-<Note>
-  A **central de anamneses** fica em **Configurações → Anamnese**. É lá que você monta os
-  questionários e decide quando eles são exigidos.
-</Note>
+Na seção **Conta** ficam **Equipe** (quem mais acessa o painel), **Configurações** (perfil,
+responsável técnico, plano e notificações) e a **Central de Ajuda**, que é onde você está
+agora.
 
 ## Por onde seguir
 
-Se você está começando agora, o caminho natural é: **convidar um atleta**, montar uma
-**anamnese**, **montar o treino** e deixar a entrega acontecer sozinha. Cada um desses
-passos tem um tutorial próprio aqui na central.
+Começando agora? O caminho natural é: **convidar um atleta**, montar uma **anamnese**,
+**montar o treino** e deixar a entrega acontecer sozinha.

@@ -1,51 +1,153 @@
 ---
-title: "Send an intake form to an athlete"
-description: "Send a questionnaire from your library to a specific athlete to answer in the app."
+title: "Send a form to an athlete"
+description: "Send an intake form or a feedback right now, pick a date, or schedule the repetition."
 ---
 
-Besides the automatic rules, you can send an intake form **right now** to a specific
-athlete — when they're back from an injury, changed goals, or you just want fresh data.
+Besides the automatic rules, you can send a form to **one specific athlete** — when
+they're back from an injury, change goals, or you want to arrange follow-up just with
+them.
 
 ## How to send it
 
 <Steps>
   <Step title="Open the athlete">
-    In **Athletes**, open the person's profile and go to the **Assessments** tab.
+    In **Athletes**, open the person and go to the **Assessments** tab.
   </Step>
-  <Step title="Click Send intake form">
-    In the **Intake** block, use the **Send intake form** button.
+  <Step title="Pick the sub-tab">
+    **Intake** or **Feedback**, depending on what you're about to send. The sub-tab is what
+    sets the type — the button and the list follow it.
   </Step>
-  <Step title="Pick which form">
-    Select a questionnaire from your library and confirm.
+  <Step title="Click Send intake form (or Send feedback)">
+    That opens the send window, already showing the forms of that type.
   </Step>
-  <Step title="They answer in the app">
-    They get a notification and answer right in the app. The answers come back to this
-    same screen.
+  <Step title="Choose which one">
+    Select the form from your library.
+  </Step>
+  <Step title="Say when">
+    **Now**, **On a date** or **Repeat**. Confirm.
   </Step>
 </Steps>
 
+## The three ways to send
+
+### Now
+
+It goes out right away. The athlete gets the notification and answers in the app.
+
+### On a date
+
+You pick the day and forget about it. The send goes out **in the morning** of that day.
+
 <Note>
-  If the list is empty, you haven't created any intake form yet. Build one in
-  **Settings → Intake** — see [create an intake form](/en/create-intake).
+  The date starts **tomorrow**, not today. Since a scheduled send goes out in the morning,
+  picking today in the afternoon would only deliver tomorrow — you'd ask for one thing and
+  get another. For today, use **Now**, which really is immediate.
 </Note>
+
+### Repeat
+
+You choose the day of the first send and how often it repeats — in **days**, **weeks** or
+**months**.
+
+<Tip>
+  This is how you build tailored follow-up: a monthly feedback for that one athlete,
+  without creating a rule that applies to your whole roster.
+</Tip>
+
+## How long the repetition lasts
+
+**There's no end date.** It repeats for as long as the person is your athlete, and stops
+on its own when the relationship ends.
+
+We prefer that to an expiry date precisely so nothing stops silently: a deadline would run
+out a year from now, the form would simply stop arriving, and you'd find out when someone
+happened to mention it.
+
+<Note>
+  **A suspended athlete doesn't receive forms** — neither immediate nor scheduled. Someone
+  who is suspended can't see their workouts, and asking "how was your workout?" in that
+  situation is out of place. The repetition is paused and, when you reactivate them, they
+  get **one** form — the current one, not the pile from the time it was stopped.
+</Note>
+
+## Seeing and canceling what's scheduled
+
+On the same sub-tab, the **Upcoming sends** block shows what is still going out and on
+which dates.
+
+The first send of each schedule also shows **Edit**. It belongs to the whole schedule, not
+to that one date — which is why it doesn't repeat on every line.
+
+- **The repetition** you can change whenever you want: the next send already goes out at
+  the new pace.
+- **The date of the first send** can only change while it hasn't happened yet. After that
+  the field appears disabled, because the send that already went out is what drives the
+  calendar from then on.
+
+When you click **Cancel**, you choose the scope:
+
+- **Cancel just this one** — that date doesn't happen. The following ones go ahead as
+  usual, on the right dates.
+- **Cancel the repetition for [Name]** — that athlete stops receiving it. If the
+  repetition came from a rule in your library, **the other athletes keep receiving it**.
+
+<Tip>
+  Canceling one send in the middle doesn't mess up the calendar: the next one lands on the
+  date that was already scheduled, not a cycle later.
+</Tip>
 
 ## Seeing the answers
 
-The **Intake** block in the profile holds every form for that athlete, newest first:
+The sub-tab holds every send for that athlete, newest first:
 
-- **Pending** (clock) — sent, not answered yet.
-- **Answered** (check) — click to open the answers, photos included.
+| Status | What it means |
+| --- | --- |
+| **Waiting for an answer in the app** | Sent, not answered yet. |
+| **Answered** | Click to open the answers, photos included. |
+| **Send canceled** | You undid it before they answered. |
+| **Not answered** | It expired when the next one was asked. |
+| **Not sent** | The intake form of the month took priority. See [Intake form or feedback?](/en/form-types) |
 
 <Tip>
-  Sending the same form again creates a **new round**. The old answers stay, so you can
-  compare before and after.
+  Sending the same form again creates a **new round**. The old answers stay stored, so you
+  can compare before and after.
 </Tip>
 
-## Manual sending doesn't lock workouts
+## How the athlete is reminded
 
-A manually sent form is a request, not a requirement: the athlete keeps normal access to
+Worth knowing, because it's the question that comes up when an athlete takes a while to
+answer.
+
+<Steps>
+  <Step title="One prompt a day, at most">
+    The form opens by itself in the app **once a day**. Showing up on every launch would
+    turn into nagging: someone who opens the app four times to train would get the same
+    prompt four times — and that doesn't make anyone answer faster.
+  </Step>
+  <Step title="They can answer later">
+    The prompt has an **Answer later**. Trapping someone who opened the app to train only
+    makes them close the app.
+  </Step>
+  <Step title="But it doesn't disappear">
+    Until they answer, a **fixed marker stays on their home screen**. Tapping it reopens the
+    form right away, even if the prompt already showed up that day.
+  </Step>
+</Steps>
+
+They also get a **notification** when the form arrives, and tapping it opens the form
+directly.
+
+<Note>
+  When the intake form is holding the workouts back, the app spells that out — in the
+  prompt and on the marker. That way the athlete understands why they aren't seeing a
+  workout, instead of thinking the app is broken.
+</Note>
+
+## Manual sending doesn't lock the workout
+
+A form sent by hand is a request, not a requirement: the athlete keeps normal access to
 their workouts.
 
-If you want the workout to unlock only after the answer, use a rule in
-**Settings → Intake → When to require**. See
+If you want the workout to unlock only after the answer, that's done with a **rule**, in
+**Forms → Intake forms → When to require**. See
 [when to require the intake](/en/recurring-intake).

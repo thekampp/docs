@@ -1,0 +1,88 @@
+---
+title: "Tags: workout tags and athlete tags"
+description: "There are two kinds of tag in Kampp, and they don't mix. Here's what each one does."
+---
+
+The word "tag" shows up in two places in Kampp and means different things. It's worth
+knowing the difference before you count on it.
+
+## Workout tags
+
+They're for **categorizing your workouts**.
+
+<Steps>
+  <Step title="Open the workout">
+    In the builder, look for the **Workout tags** field.
+  </Step>
+  <Step title="Pick one or create one">
+    Search for an existing tag or type a new name and click **Create "..."**. It's created
+    on the spot and already selected.
+  </Step>
+  <Step title="Confirm">
+    Click **Confirm**.
+  </Step>
+</Steps>
+
+You have two lists:
+
+- **System tags** — the ones that come ready from Kampp, the same for everyone.
+- **My tags** — the ones you created.
+
+Tags appear on the workout and on its detail screen.
+
+<Note>
+  Today workout tags are a **visual label**: there's no filter by tag in the library, and no
+  screen to rename, recolor or delete a tag once it's created. Create them carefully,
+  because the name sticks.
+</Note>
+
+## Athlete tags
+
+They're for **grouping people**, and they're used as the audience for the
+[chat broadcast](/en/chat-broadcast).
+
+<Warning>
+  **You can't tag an athlete by hand.** There's no such button on their profile or in the
+  athlete list. Athlete tags are only born inside an automation.
+</Warning>
+
+### How to create an athlete tag
+
+It happens in [Kampp Flow](/en/flow-what-is), as a step in the automation:
+
+<Steps>
+  <Step title="Build a flow">
+    Choose the trigger that defines the group (for example: the athlete became at risk).
+  </Step>
+  <Step title="Add the Tag step">
+    On the **+** button, pick **Tag**.
+  </Step>
+  <Step title="Choose the action">
+    **Add tag** or **Remove tag**, and write the name (for example: `At risk`).
+  </Step>
+</Steps>
+
+From then on, every athlete who hits that trigger gets the tag on their own — and the tag
+starts showing up in the broadcast selector.
+
+<Note>
+  That's why the broadcast's **Tag** selector can be empty: if none of your flows tag
+  anyone, there are no athlete tags yet. Build the flow first.
+</Note>
+
+<Tip>
+  The ready-made Flow templates already do this: one marks `At risk` when the athlete cools
+  off, and another removes the tag when they start training again. It's the fastest way to
+  have a group that maintains itself.
+</Tip>
+
+## The two never cross
+
+Workout tags and athlete tags are separate universes. Even with identical names, one never
+shows up in place of the other.
+
+| | Workout tag | Athlete tag |
+| --- | --- | --- |
+| **Where you create it** | In the workout builder | In a Kampp Flow step |
+| **What it's for** | Organizing your library | Defining a broadcast audience |
+| **Apply by hand?** | Yes | No — only through automation |

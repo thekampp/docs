@@ -1,0 +1,88 @@
+---
+title: "Tags: as de treino e as de atleta"
+description: "Existem dois tipos de tag no Kampp, e eles não se misturam. Entenda cada um."
+---
+
+A palavra "tag" aparece em dois lugares do Kampp e significa coisas diferentes. Vale
+entender a diferença antes de contar com ela.
+
+## Tags de treino
+
+Servem para **categorizar os seus treinos**.
+
+<Steps>
+  <Step title="Abra o treino">
+    No construtor, procure o campo **Tags do Treino**.
+  </Step>
+  <Step title="Escolha ou crie">
+    Busque uma tag existente ou digite um nome novo e clique em **Criar "..."**. Ela é
+    criada na hora e já fica selecionada.
+  </Step>
+  <Step title="Confirme">
+    Clique em **Confirmar**.
+  </Step>
+</Steps>
+
+Você tem duas listas:
+
+- **Tags do sistema** — as que já vêm prontas da Kampp, iguais para todo mundo.
+- **Minhas tags** — as que você criou.
+
+As tags aparecem no treino e na tela de detalhe dele.
+
+<Note>
+  Hoje as tags de treino são **rótulo visual**: não existe filtro por tag na biblioteca, nem
+  tela para renomear, recolorir ou apagar uma tag já criada. Crie com calma, porque o nome
+  fica.
+</Note>
+
+## Tags de atleta
+
+Servem para **agrupar pessoas** e são usadas como público do
+[aviso em massa do chat](/pt-BR/chat-aviso-em-massa).
+
+<Warning>
+  **Você não consegue etiquetar um atleta na mão.** Não há esse botão na ficha dele nem na
+  lista de atletas. Tags de atleta só nascem dentro de uma automação.
+</Warning>
+
+### Como criar uma tag de atleta
+
+É no [Kampp Flow](/pt-BR/flow-o-que-e), como um passo da automação:
+
+<Steps>
+  <Step title="Monte um fluxo">
+    Escolha o gatilho que define o grupo (ex.: o atleta entrou em risco).
+  </Step>
+  <Step title="Adicione o passo Tag">
+    No botão **+**, escolha **Tag**.
+  </Step>
+  <Step title="Escolha a ação">
+    **Adicionar tag** ou **Remover tag**, e escreva o nome (ex.: `Em risco`).
+  </Step>
+</Steps>
+
+A partir daí, todo atleta que passar por aquele gatilho recebe a etiqueta sozinho — e a tag
+passa a aparecer no seletor do aviso em massa.
+
+<Note>
+  Por isso o seletor **Tag** do aviso em massa pode estar vazio: se nenhum fluxo seu
+  etiqueta ninguém, não existe tag de atleta ainda. Monte o fluxo primeiro.
+</Note>
+
+<Tip>
+  Os modelos prontos do Flow já fazem isso: um marca `Em risco` quando o atleta esfria, e
+  outro remove a etiqueta quando ele volta a treinar. É a forma mais rápida de ter um grupo
+  que se mantém sozinho.
+</Tip>
+
+## As duas não se cruzam
+
+Tag de treino e tag de atleta são universos separados. Mesmo com o nome idêntico, uma não
+aparece no lugar da outra.
+
+| | Tag de treino | Tag de atleta |
+| --- | --- | --- |
+| **Onde cria** | No construtor de treino | Num passo do Kampp Flow |
+| **Serve para** | Organizar a sua biblioteca | Definir público de aviso |
+| **Aplica na mão?** | Sim | Não — só por automação |
