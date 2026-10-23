@@ -134,7 +134,9 @@
               "pt-BR/flow-gatilhos-engajamento",
               "pt-BR/flow-aniversario",
               "pt-BR/flow-campanha-data",
-              "pt-BR/flow-descadastro"
+              "pt-BR/flow-agenda-semanal",
+              "pt-BR/flow-descadastro",
+              "pt-BR/flow-webhook"
             ]
           },
           {
@@ -292,7 +294,9 @@
               "en/flow-engagement-triggers",
               "en/flow-birthday",
               "en/flow-scheduled-campaign",
-              "en/flow-opt-out"
+              "en/flow-weekly-schedule",
+              "en/flow-opt-out",
+              "en/flow-webhook"
             ]
           },
           {

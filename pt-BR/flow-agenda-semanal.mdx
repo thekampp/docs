@@ -1,0 +1,59 @@
+---
+title: "Mensagem toda semana (e WhatsApp só para quem não leu)"
+description: "Dispare todo sábado, ou todo dia, no mesmo horário para todos os atletas, e mande WhatsApp só para quem não leu o chat."
+---
+
+Com o gatilho **Agenda que se repete**, todos os atletas recebem juntos, no mesmo dia e
+horário, toda semana. Não importa quando cada um entrou. Ótimo para o "como foi a sua semana?".
+
+## Exemplo: feedback de sábado
+
+```
+Agenda que se repete: sábado às 09:00
+  → Enviar mensagem no chat: "Como foi a sua semana? Treinos, alimentação, sono..."
+  → Esperar 4 horas
+  → Condição: Leitura do chat (não leu a última mensagem)
+  → Enviar WhatsApp (Oficial)
+```
+
+Quem leu o chat para na condição. Só quem não leu recebe o WhatsApp.
+
+<Steps>
+  <Step title="Escolha o gatilho">
+    Em **Data e agenda**, escolha **Agenda que se repete**. Marque **Toda semana** e os dias
+    (pode ser mais de um), ou **Todo dia**. Depois escolha o horário (horário de Brasília).
+  </Step>
+  <Step title="Filtre quem recebe (opcional)">
+    Use as condições de sempre: **Entrega**, **Tag**, **Time**... Quer uma mensagem diferente
+    para cada entrega? Crie um fluxo para cada uma (o botão **Duplicar** ajuda).
+  </Step>
+  <Step title="Monte a sequência">
+    Mensagem no chat, uma espera e, depois dela, a condição **Leitura do chat**. Por último, o
+    WhatsApp.
+  </Step>
+</Steps>
+
+## Como funciona
+
+- Recebem os seus **atletas ativos** que passarem nas condições do fluxo.
+- Cada atleta recebe **no máximo uma vez por dia** por fluxo. Mudar o horário depois do
+  disparo não manda de novo no mesmo dia.
+- Se você ativar o fluxo até 15 minutos depois do horário, ele dispara na hora. Depois
+  disso, fica para o próximo dia marcado.
+
+## Condição "Leitura do chat"
+
+Confere se o atleta leu a **última mensagem** que você, sua equipe ou um fluxo mandou no chat.
+
+- **Não leu a última mensagem**: passa quem ainda não abriu.
+- **Leu a última mensagem**: passa quem já viu, ou seja, a mensagem está com os dois tiques no chat. Basta abrir a conversa, não precisa responder.
+- Atleta sem nenhuma mensagem sua no chat não passa em nenhuma das duas.
+
+Ela pode ficar no começo do fluxo (logo depois do gatilho) ou **no meio da sequência**,
+depois de uma espera. No meio, ela é conferida na hora em que o fluxo chega nela. Se o
+atleta não passar, o fluxo para ali (o que já foi enviado, foi).
+
+<Tip>
+  Para colocar a condição no meio, adicione primeiro a mensagem e a espera. Depois clique
+  em **+** e escolha **Condição**: ela entra no fim da sequência.
+</Tip>

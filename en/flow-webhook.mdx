@@ -1,0 +1,75 @@
+---
+title: "Notify another system (Webhook)"
+description: "Send the athlete's data and the message that went out to n8n, Make, Zapier or your CRM."
+---
+
+The **Webhook** step notifies another system every time the flow reaches it. A common use:
+place it right after a WhatsApp step to log the message in your support inbox (Chatwoot,
+CRM, spreadsheet...).
+
+## How to set it up
+
+<Steps>
+  <Step title="Add the step">
+    In the flow, click **+** and choose **Webhook**. Place it after the message you want to log.
+  </Step>
+  <Step title="Paste the URL">
+    It's the address your automation gives you (for example, the Webhook node in n8n).
+  </Step>
+  <Step title="Choose what to send">
+    Tick the data you want to receive. The options follow the message above: Official WhatsApp
+    sends the **template name**; z-API and chat send the **message text**.
+  </Step>
+  <Step title="Test it">
+    Click **Testar envio** (Send test). You'll get an example with a sample athlete and `"test": true`.
+  </Step>
+</Steps>
+
+## What you receive
+
+```json
+{
+  "event": "flow.webhook",
+  "test": false,
+  "firedAt": "2026-10-22T18:30:05.000Z",
+  "executionId": "…",
+  "flow": { "id": "…", "name": "Welcome" },
+  "athlete": { "id": "…", "name": "Ana Souza", "email": "ana@email.com", "phone": "5511999999999" },
+  "message": {
+    "channel": "whatsapp_official",
+    "status": "success",
+    "detail": "template \"welcome\" enviado",
+    "sentAt": "2026-10-22T18:30:00.000Z",
+    "sentAtBrasilia": "22/10/2026 15:30:00",
+    "templateName": "welcome",
+    "language": "en_US",
+    "variables": ["Ana"]
+  }
+}
+```
+
+- `message` describes the **last message before the webhook**. With no message before it, it's left out.
+- `channel`: `whatsapp_official`, `whatsapp_zapi` or `chat`. For z-API and chat, instead of the
+  template you get `messages`: a list with `text`, `mediaUrl` and `fileName`.
+- `status`: `success` (sent), `skipped` (not sent, for example the athlete has no phone or opted
+  out) or `failed`. When it wasn't sent, content and time are left out.
+
+<Tip>
+  In your automation, filter on `message.status = "success"` so you don't log a message that
+  never reached the athlete.
+</Tip>
+
+## Secret key (optional)
+
+With a key, every request carries the header `X-Kampp-Signature: sha256=<signature>`, an
+HMAC-SHA256 of the body using your key. Check it to make sure the request came from Kampp.
+
+## If your system is down
+
+If the URL doesn't answer (or returns 5xx or 429), Kampp retries after 1, 5 and 15 minutes.
+A 4xx error (wrong address, for example) isn't retried: it shows up in the flow history.
+The WhatsApp message before it is **not** sent again.
+
+<Note>
+  The URL must be public (`https://`). Internal network addresses are refused.
+</Note>

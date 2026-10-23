@@ -1,0 +1,61 @@
+---
+title: "Weekly message (and WhatsApp only for those who didn't read)"
+description: "Send every Saturday, or every day, at the same time to all athletes, and send WhatsApp only to those who didn't read the chat."
+---
+
+With the **Agenda que se repete** (repeating schedule) trigger, every athlete receives the
+message together, on the same day and time, every week, no matter when each one joined.
+Great for "how was your week?".
+
+## Example: Saturday feedback
+
+```
+Repeating schedule: Saturday at 09:00
+  → Send chat message: "How was your week? Workouts, diet, sleep..."
+  → Wait 4 hours
+  → Condition: Chat read status (didn't read the last message)
+  → Send WhatsApp (Official)
+```
+
+Whoever read the chat stops at the condition. Only those who didn't read get the WhatsApp.
+
+<Steps>
+  <Step title="Pick the trigger">
+    Under **Data e agenda**, choose **Agenda que se repete**. Select **Toda semana** (every
+    week) and the days (more than one is fine), or **Todo dia** (every day). Then pick the time
+    (Brasília time).
+  </Step>
+  <Step title="Filter who receives it (optional)">
+    Use the usual conditions: **Delivery**, **Tag**, **Team**... Want a different message for
+    each delivery? Create one flow per delivery (the **Duplicate** button helps).
+  </Step>
+  <Step title="Build the sequence">
+    Chat message, a wait and, after it, the **Leitura do chat** (chat read status) condition.
+    Finally, the WhatsApp.
+  </Step>
+</Steps>
+
+## How it works
+
+- Your **active athletes** who pass the flow's conditions receive it.
+- Each athlete receives it **at most once a day** per flow. Changing the time after it fired
+  doesn't send again on the same day.
+- If you activate the flow up to 15 minutes after the time, it fires right away. After that,
+  it waits for the next selected day.
+
+## "Chat read status" condition
+
+Checks whether the athlete read the **last message** that you, your team or a flow sent in the chat.
+
+- **Didn't read the last message**: passes those who haven't opened it yet.
+- **Read the last message**: passes those who saw it, meaning the message shows the two ticks in the chat. Opening the conversation is enough; no reply needed.
+- An athlete with no message from you in the chat passes neither.
+
+It can sit at the start of the flow (right after the trigger) or **in the middle of the
+sequence**, after a wait. In the middle, it's checked when the flow reaches it. If the athlete
+doesn't pass, the flow stops there (what was already sent stays sent).
+
+<Tip>
+  To place the condition in the middle, add the message and the wait first. Then click **+**
+  and choose **Condição** (Condition): it goes at the end of the sequence.
+</Tip>
