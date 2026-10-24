@@ -136,7 +136,8 @@
               "pt-BR/flow-campanha-data",
               "pt-BR/flow-agenda-semanal",
               "pt-BR/flow-descadastro",
-              "pt-BR/flow-webhook"
+              "pt-BR/flow-webhook",
+              "pt-BR/banners-app"
             ]
           },
           {
@@ -296,7 +297,8 @@
               "en/flow-scheduled-campaign",
               "en/flow-weekly-schedule",
               "en/flow-opt-out",
-              "en/flow-webhook"
+              "en/flow-webhook",
+              "en/app-banners"
             ]
           },
           {
